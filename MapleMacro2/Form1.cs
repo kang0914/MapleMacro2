@@ -26,7 +26,8 @@ namespace MapleMacro2
 
             // 핫키 등록
             //HotKeyHelper.RegisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID, HotKeyHelper.KeyModifiers.Control | HotKeyHelper.KeyModifiers.Shift, Keys.N);
-            HotKeyHelper.RegisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID, HotKeyHelper.KeyModifiers.None, Keys.F4);
+            //HotKeyHelper.RegisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID, HotKeyHelper.KeyModifiers.None, Keys.F4);
+            HotKeyHelper.RegisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID, HotKeyHelper.KeyModifiers.Control, Keys.F2);
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -200,5 +201,9 @@ namespace MapleMacro2
 
         #endregion hooking
 
+        private void keysTextBox시작_키_KeyDown(object sender, KeyEventArgs e)
+        {   
+
+        }
     }
 }

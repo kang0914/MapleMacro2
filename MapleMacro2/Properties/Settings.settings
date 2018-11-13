@@ -29,5 +29,11 @@
     <Setting Name="설정_매크로_활성_시간" Type="System.String" Scope="User">
       <Value Profile="(Default)">1000</Value>
     </Setting>
+    <Setting Name="설정_시작_키" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">None</Value>
+    </Setting>
+    <Setting Name="설정_종료_키" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">None</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

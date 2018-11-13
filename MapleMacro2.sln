@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapleMacro2", "MapleMacro2\MapleMacro2.csproj", "{74EE5D26-B61B-41CE-947E-20876FDACE5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapleMacro2.Tests", "MapleMacro2.Tests\MapleMacro2.Tests.csproj", "{76575ABE-B48C-4914-9A06-59FFDBA93A26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{74EE5D26-B61B-41CE-947E-20876FDACE5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74EE5D26-B61B-41CE-947E-20876FDACE5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74EE5D26-B61B-41CE-947E-20876FDACE5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76575ABE-B48C-4914-9A06-59FFDBA93A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76575ABE-B48C-4914-9A06-59FFDBA93A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76575ABE-B48C-4914-9A06-59FFDBA93A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76575ABE-B48C-4914-9A06-59FFDBA93A26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

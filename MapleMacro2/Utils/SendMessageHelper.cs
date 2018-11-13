@@ -23,7 +23,7 @@ namespace MapleMacro2.Utils
             IntPtr WindowName = FindWindow(null, windowName);
             if (WindowName == IntPtr.Zero)
             {
-                throw new Exception();
+                //throw new Exception();
             }
 
             return WindowName;

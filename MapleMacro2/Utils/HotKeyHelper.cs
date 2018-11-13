@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace MapleMacro2.Utils
 {
-    class HotKeyHelper
+    public class HotKeyHelper
     {
         [DllImport("user32.dll")]
         public static extern bool RegisterHotKey(IntPtr hWnd, int id, KeyModifiers fsModifiers, Keys vk);
