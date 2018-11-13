@@ -15,7 +15,9 @@ namespace MapleMacro2.Utils
         [DllImport("user32.dll")]
         public static extern bool UnregisterHotKey(IntPtr hWnd, int id);
 
-        public const int HOTKEY_ID = 31197; //Any number to use to identify the hotkey instance
+        public const int HOTKEY_ID_START_MACRO = 31197; //Any number to use to identify the hotkey instance
+        public const int HOTKEY_ID_END_MACRO = 31198; //Any number to use to identify the hotkey instance
+
         public const int WM_HOTKEY = 0x0312;
 
         public enum KeyModifiers

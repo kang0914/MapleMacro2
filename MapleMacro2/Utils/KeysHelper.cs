@@ -33,16 +33,16 @@ namespace MapleMacro2.Utils
         {
             Keys modifiers = Keys.None;
 
-            if ((keys & Keys.Control) == Keys.Control)
+            if (keys.HasFlag(Keys.Control))
                 modifiers = modifiers | Keys.Control;
 
-            if ((keys & Keys.Alt) == Keys.Alt)
+            if (keys.HasFlag(Keys.Alt))
                 modifiers = modifiers | Keys.Alt;
 
-            if ((keys & Keys.Shift) == Keys.Shift)
+            if (keys.HasFlag(Keys.Shift))
                 modifiers = modifiers | Keys.Shift;
 
-            if ((keys & Keys.LWin) == Keys.LWin)
+            if (keys.HasFlag(Keys.LWin))
                 modifiers = modifiers | Keys.LWin;
 
             return modifiers;
@@ -52,35 +52,35 @@ namespace MapleMacro2.Utils
         {
             HotKeyHelper.KeyModifiers modifiers = HotKeyHelper.KeyModifiers.None;
 
-            if ((keys & Keys.Control) == Keys.Control)
+            if (keys.HasFlag(Keys.Control))
                 modifiers = modifiers | HotKeyHelper.KeyModifiers.Control;
 
-            if ((keys & Keys.Alt) == Keys.Alt)
+            if (keys.HasFlag(Keys.Alt))
                 modifiers = modifiers | HotKeyHelper.KeyModifiers.Alt;
 
-            if ((keys & Keys.Shift) == Keys.Shift)
+            if (keys.HasFlag(Keys.Shift))
                 modifiers = modifiers | HotKeyHelper.KeyModifiers.Shift;
 
-            if ((keys & Keys.LWin) == Keys.LWin)
+            if (keys.HasFlag(Keys.LWin))
                 modifiers = modifiers | HotKeyHelper.KeyModifiers.Windows;
 
             return modifiers;
         }
         public static Keys ClearModifiers(Keys keys)
         {
-            Keys modifiers = Keys.None;
+            Keys modifiers = keys;
 
-            if ((keys & Keys.Control) == Keys.Control)
-                modifiers = modifiers ^ Keys.Control;
+            if (keys.HasFlag(Keys.Control))
+                modifiers &= ~Keys.Control;
 
-            if ((keys & Keys.Alt) == Keys.Alt)
-                modifiers = modifiers ^ Keys.Alt;
+            if (keys.HasFlag(Keys.Alt))
+                modifiers &= ~Keys.Alt;
 
-            if ((keys & Keys.Shift) == Keys.Shift)
-                modifiers = modifiers ^ Keys.Shift;
+            if (keys.HasFlag(Keys.Shift))
+                modifiers &= ~Keys.Shift;
 
-            if ((keys & Keys.LWin) == Keys.LWin)
-                modifiers = modifiers ^ Keys.LWin;
+            if (keys.HasFlag(Keys.LWin))
+                modifiers &= ~Keys.LWin;
 
             return modifiers;
         }

@@ -8,6 +8,8 @@ namespace MapleMacro2.UserControls
 {
     public class KeysTextBox : TextBox
     {
+        public event EventHandler KeysChanged;
+
         public KeysTextBox() :
             base()
         {
@@ -23,6 +25,9 @@ namespace MapleMacro2.UserControls
                 _SelectedKeys = value;
 
                 UpdateDisplayText();
+
+                if (KeysChanged != null)
+                    KeysChanged(this, new EventArgs());
             }
         }
 

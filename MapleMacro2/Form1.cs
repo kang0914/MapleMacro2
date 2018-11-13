@@ -12,7 +12,7 @@ namespace MapleMacro2
 {
     public partial class Form1 : Form
     {
-        private GlobalKeyboardHook _globalKeyboardHook;
+        private const string PROC_NAME_MAPLE_STORY = "MapleStory";
 
         public Form1()
         {
@@ -21,53 +21,124 @@ namespace MapleMacro2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //_globalKeyboardHook = new GlobalKeyboardHook();
-            //_globalKeyboardHook.KeyboardPressed += OnKeyPressed;
-
             // 핫키 등록
-            //HotKeyHelper.RegisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID, HotKeyHelper.KeyModifiers.Control | HotKeyHelper.KeyModifiers.Shift, Keys.N);
-            //HotKeyHelper.RegisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID, HotKeyHelper.KeyModifiers.None, Keys.F4);
-            HotKeyHelper.RegisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID, HotKeyHelper.KeyModifiers.Control, Keys.F2);
+            RegisterHotKey();    
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //_globalKeyboardHook?.Dispose();
-
             //핫키 해제
-            HotKeyHelper.UnregisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID);
+            UnregisterHotKey();
 
+            // 설정 저장
             Properties.Settings.Default.Save();
         }
+
+        #region HotKey
 
         protected override void WndProc(ref Message message)
         {
             switch (message.Msg)
             {
                 case HotKeyHelper.WM_HOTKEY:
-                    Keys key = (Keys)(((int)message.LParam >> 16) & 0xFFFF);
-                    HotKeyHelper.KeyModifiers modifier = (HotKeyHelper.KeyModifiers)((int)message.LParam & 0xFFFF);
-                    //MessageBox.Show("HotKey Pressed :" + modifier.ToString() + " " + key.ToString());
+                    { 
+                        Keys key = (Keys)(((int)message.LParam >> 16) & 0xFFFF);
+                        HotKeyHelper.KeyModifiers modifier = (HotKeyHelper.KeyModifiers)((int)message.LParam & 0xFFFF);                        
 
-                    //if ((HotKeyHelper.KeyModifiers.Control | HotKeyHelper.KeyModifiers.Shift) == modifier && Keys.N == key)
-                    if ((HotKeyHelper.KeyModifiers.None) == modifier && Keys.F4 == key)
-                    {
-                        //Process.Start("notepad.exe");
-                        //MessageBox.Show("");
+                        var startKeys = KeysHelper.ClearModifiers(keysTextBox시작_키.SelectedKeys);
+                        var startModifiers = KeysHelper.CovertToHotKeyModifiers(keysTextBox시작_키.SelectedKeys);
 
-                        if (!timer1.Enabled)
-                            button시작_Click(null, null);
-                        else
-                            button중지_Click(null, null);
+                        var endKeys = KeysHelper.ClearModifiers(keysTextBox종료_키.SelectedKeys);
+                        var endModifiers = KeysHelper.CovertToHotKeyModifiers(keysTextBox종료_키.SelectedKeys);
+
+                        //if ((HotKeyHelper.KeyModifiers.Control | HotKeyHelper.KeyModifiers.Shift) == modifier && Keys.N == key)
+                        //if ((HotKeyHelper.KeyModifiers.None) == modifier && Keys.F4 == key)
+                        if (startModifiers == modifier &&
+                            startKeys == key)
+                        {
+                            // 시작 키, 종료 키가 같을 경우에는 토글
+                            if(startKeys == endKeys &&
+                               startModifiers == endModifiers)
+                            {
+                                ToggleMacro();
+                            }
+                            else
+                            {
+                                StartMacro();
+                            }
+                        }
+                        else if(endModifiers == modifier &&
+                                endKeys == key)
+                        {
+                            EndMacro();
+                        }
                     }
-
                     break;
             }
             base.WndProc(ref message);
         }
 
+        private void RegisterHotKey()
+        {
+            //HotKeyHelper.RegisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID, HotKeyHelper.KeyModifiers.Control | HotKeyHelper.KeyModifiers.Shift, Keys.N);
+            //HotKeyHelper.RegisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID, HotKeyHelper.KeyModifiers.None, Keys.F4);
+
+            var startKeys = KeysHelper.ClearModifiers(Properties.Settings.Default.설정_시작_키);
+            var startModifiers = KeysHelper.CovertToHotKeyModifiers(Properties.Settings.Default.설정_시작_키);
+
+            var endKeys = KeysHelper.ClearModifiers(Properties.Settings.Default.설정_종료_키);
+            var endModifiers = KeysHelper.CovertToHotKeyModifiers(Properties.Settings.Default.설정_종료_키);
+
+            if (startKeys == endKeys &&
+                startModifiers == endModifiers)
+            {
+                if (startKeys != Keys.None)
+                    HotKeyHelper.RegisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID_START_MACRO, startModifiers, startKeys);
+            }
+            else
+            {
+                if(startKeys != Keys.None)
+                    HotKeyHelper.RegisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID_START_MACRO, startModifiers, startKeys);
+
+                if (endKeys != Keys.None)
+                    HotKeyHelper.RegisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID_END_MACRO, endModifiers, endKeys);
+            }
+
+        }
+
+        private void UnregisterHotKey()
+        {
+            HotKeyHelper.UnregisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID_START_MACRO);
+            HotKeyHelper.UnregisterHotKey(this.Handle, HotKeyHelper.HOTKEY_ID_END_MACRO);
+        }
+
+        private void UpdateHotKey()
+        {
+            UnregisterHotKey();
+            RegisterHotKey();
+        }
+
+        #endregion HotKey
+
         private void button시작_Click(object sender, EventArgs e)
         {
+            StartMacro();
+        }
+
+        private void button중지_Click(object sender, EventArgs e)
+        {
+            EndMacro();
+        }
+
+        private bool IsRunMacro = false;
+
+        private void StartMacro()
+        {
+            if (IsRunMacro)
+                return;
+
+            IsRunMacro = true;
+
             // 최초 실행
             timer1_Tick(null, null);
             timer2_Tick(null, null);
@@ -90,8 +161,13 @@ namespace MapleMacro2
             toolStripStatusLabel시작유무.Text = "동작 중...";
         }
 
-        private void button중지_Click(object sender, EventArgs e)
+        private void EndMacro()
         {
+            if (IsRunMacro == false)
+                return;
+
+            IsRunMacro = false;
+
             timer1.Enabled = false;
             timer2.Enabled = false;
             timer3.Enabled = false;
@@ -101,7 +177,13 @@ namespace MapleMacro2
             toolStripStatusLabel시작유무.Text = "정지";
         }
 
-        private const string PROC_NAME_MAPLE_STORY = "MapleStory";
+        private void ToggleMacro()
+        {
+            if (IsRunMacro)
+                EndMacro();
+            else
+                StartMacro();
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -174,36 +256,14 @@ namespace MapleMacro2
 
         #endregion 캡쳐
 
-        #region hooking
-
-        private void OnKeyPressed(object sender, GlobalKeyboardHookEventArgs e)
+        private void keysTextBox시작_키_KeysChanged(object sender, EventArgs e)
         {
-            //Debug.WriteLine(e.KeyboardData.VirtualCode);
-
-            if (e.KeyboardData.VirtualCode != GlobalKeyboardHook.VkSnapshot)
-                return;
-
-            // seems, not needed in the life.
-            //if (e.KeyboardState == GlobalKeyboardHook.KeyboardState.SysKeyDown &&
-            //    e.KeyboardData.Flags == GlobalKeyboardHook.LlkhfAltdown)
-            //{
-            //    MessageBox.Show("Alt + Print Screen");
-            //    e.Handled = true;
-            //}
-            //else
-
-            if (e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
-            {
-                MessageBox.Show("Print Screen");
-                e.Handled = true;
-            }
+            UpdateHotKey();
         }
 
-        #endregion hooking
-
-        private void keysTextBox시작_키_KeyDown(object sender, KeyEventArgs e)
-        {   
-
+        private void keysTextBox종료_키_KeysChanged(object sender, EventArgs e)
+        {
+            UpdateHotKey();
         }
     }
 }

@@ -32,9 +32,6 @@
             this.button시작 = new System.Windows.Forms.Button();
             this.button중지 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button캡쳐 = new System.Windows.Forms.Button();
-            this.button캡쳐2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,11 +69,10 @@
             this.toolStripStatusLabel시작유무 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar시작유무 = new System.Windows.Forms.ToolStripProgressBar();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.keysTextBox종료_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.keysTextBox시작_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.keysTextBox1 = new MapleMacro2.UserControls.KeysTextBox();
+            this.keysTextBox종료_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.keysTextBox시작_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -107,37 +103,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(13, 379);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(405, 42);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Visible = false;
-            // 
-            // button캡쳐
-            // 
-            this.button캡쳐.Location = new System.Drawing.Point(262, 347);
-            this.button캡쳐.Name = "button캡쳐";
-            this.button캡쳐.Size = new System.Drawing.Size(75, 23);
-            this.button캡쳐.TabIndex = 3;
-            this.button캡쳐.Text = "캡쳐";
-            this.button캡쳐.UseVisualStyleBackColor = true;
-            this.button캡쳐.Visible = false;
-            this.button캡쳐.Click += new System.EventHandler(this.button캡쳐_Click);
-            // 
-            // button캡쳐2
-            // 
-            this.button캡쳐2.Location = new System.Drawing.Point(343, 347);
-            this.button캡쳐2.Name = "button캡쳐2";
-            this.button캡쳐2.Size = new System.Drawing.Size(75, 23);
-            this.button캡쳐2.TabIndex = 4;
-            this.button캡쳐2.Text = "캡쳐2";
-            this.button캡쳐2.UseVisualStyleBackColor = true;
-            this.button캡쳐2.Visible = false;
-            this.button캡쳐2.Click += new System.EventHandler(this.button캡쳐2_Click);
             // 
             // label1
             // 
@@ -465,10 +430,11 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel시작유무,
             this.toolStripProgressBar시작유무});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 424);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 335);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.statusStrip1.Size = new System.Drawing.Size(651, 22);
+            this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 14;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -496,31 +462,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "시작/종료 키";
             // 
-            // keysTextBox종료_키
-            // 
-            this.keysTextBox종료_키.DataBindings.Add(new System.Windows.Forms.Binding("SelectedKeys", global::MapleMacro2.Properties.Settings.Default, "설정_종료_키", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.keysTextBox종료_키.Location = new System.Drawing.Point(90, 51);
-            this.keysTextBox종료_키.Name = "keysTextBox종료_키";
-            this.keysTextBox종료_키.ReadOnly = true;
-            this.keysTextBox종료_키.SelectedKeys = global::MapleMacro2.Properties.Settings.Default.설정_종료_키;
-            this.keysTextBox종료_키.Size = new System.Drawing.Size(100, 21);
-            this.keysTextBox종료_키.TabIndex = 13;
-            this.keysTextBox종료_키.Text = "None";
-            this.keysTextBox종료_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // keysTextBox시작_키
-            // 
-            this.keysTextBox시작_키.DataBindings.Add(new System.Windows.Forms.Binding("SelectedKeys", global::MapleMacro2.Properties.Settings.Default, "설정_시작_키", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.keysTextBox시작_키.Location = new System.Drawing.Point(90, 24);
-            this.keysTextBox시작_키.Name = "keysTextBox시작_키";
-            this.keysTextBox시작_키.ReadOnly = true;
-            this.keysTextBox시작_키.SelectedKeys = global::MapleMacro2.Properties.Settings.Default.설정_시작_키;
-            this.keysTextBox시작_키.Size = new System.Drawing.Size(100, 21);
-            this.keysTextBox시작_키.TabIndex = 13;
-            this.keysTextBox시작_키.Text = "None";
-            this.keysTextBox시작_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.keysTextBox시작_키.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keysTextBox시작_키_KeyDown);
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -539,31 +480,44 @@
             this.label15.TabIndex = 12;
             this.label15.Text = "시작 키";
             // 
-            // keysTextBox1
+            // keysTextBox종료_키
             // 
-            this.keysTextBox1.Location = new System.Drawing.Point(103, 181);
-            this.keysTextBox1.Name = "keysTextBox1";
-            this.keysTextBox1.ReadOnly = true;
-            this.keysTextBox1.SelectedKeys = System.Windows.Forms.Keys.None;
-            this.keysTextBox1.Size = new System.Drawing.Size(100, 21);
-            this.keysTextBox1.TabIndex = 17;
-            this.keysTextBox1.Text = "None";
+            this.keysTextBox종료_키.DataBindings.Add(new System.Windows.Forms.Binding("SelectedKeys", global::MapleMacro2.Properties.Settings.Default, "설정_종료_키", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.keysTextBox종료_키.Location = new System.Drawing.Point(90, 51);
+            this.keysTextBox종료_키.Name = "keysTextBox종료_키";
+            this.keysTextBox종료_키.ReadOnly = true;
+            this.keysTextBox종료_키.SelectedKeys = global::MapleMacro2.Properties.Settings.Default.설정_종료_키;
+            this.keysTextBox종료_키.Size = new System.Drawing.Size(100, 21);
+            this.keysTextBox종료_키.TabIndex = 13;
+            this.keysTextBox종료_키.Text = "None";
+            this.keysTextBox종료_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.keysTextBox종료_키.KeysChanged += new System.EventHandler(this.keysTextBox종료_키_KeysChanged);
+            // 
+            // keysTextBox시작_키
+            // 
+            this.keysTextBox시작_키.DataBindings.Add(new System.Windows.Forms.Binding("SelectedKeys", global::MapleMacro2.Properties.Settings.Default, "설정_시작_키", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.keysTextBox시작_키.Location = new System.Drawing.Point(90, 24);
+            this.keysTextBox시작_키.Name = "keysTextBox시작_키";
+            this.keysTextBox시작_키.ReadOnly = true;
+            this.keysTextBox시작_키.SelectedKeys = global::MapleMacro2.Properties.Settings.Default.설정_시작_키;
+            this.keysTextBox시작_키.Size = new System.Drawing.Size(100, 21);
+            this.keysTextBox시작_키.TabIndex = 13;
+            this.keysTextBox시작_키.Text = "None";
+            this.keysTextBox시작_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.keysTextBox시작_키.KeysChanged += new System.EventHandler(this.keysTextBox시작_키_KeysChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 446);
-            this.Controls.Add(this.keysTextBox1);
+            this.ClientSize = new System.Drawing.Size(651, 357);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button캡쳐2);
-            this.Controls.Add(this.button캡쳐);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button중지);
             this.Controls.Add(this.button시작);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "MapleMacro2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -586,9 +540,6 @@
         private System.Windows.Forms.Button button시작;
         private System.Windows.Forms.Button button중지;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button캡쳐;
-        private System.Windows.Forms.Button button캡쳐2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -628,7 +579,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private UserControls.KeysTextBox keysTextBox1;
         private UserControls.KeysTextBox keysTextBox종료_키;
         private UserControls.KeysTextBox keysTextBox시작_키;
     }
