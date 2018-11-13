@@ -71,17 +71,40 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.새파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.열기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.저장ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.다른이름으로저장ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.종료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.도움말ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.홈페이지ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.업데이트확인ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.keysTextBox종료_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.keysTextBox시작_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button시작
             // 
-            this.button시작.Location = new System.Drawing.Point(13, 12);
+            this.button시작.Location = new System.Drawing.Point(12, 52);
             this.button시작.Name = "button시작";
             this.button시작.Size = new System.Drawing.Size(75, 23);
             this.button시작.TabIndex = 0;
@@ -91,7 +114,7 @@
             // 
             // button중지
             // 
-            this.button중지.Location = new System.Drawing.Point(94, 14);
+            this.button중지.Location = new System.Drawing.Point(93, 52);
             this.button중지.Name = "button중지";
             this.button중지.Size = new System.Drawing.Size(75, 23);
             this.button중지.TabIndex = 1;
@@ -294,7 +317,7 @@
             this.groupBox1.Controls.Add(this.textBox기술_3_키);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.textBox기술_1_실행간격);
-            this.groupBox1.Location = new System.Drawing.Point(262, 135);
+            this.groupBox1.Location = new System.Drawing.Point(262, 195);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(366, 177);
             this.groupBox1.TabIndex = 12;
@@ -390,7 +413,7 @@
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.textBox설정_매크로_활성_시간);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Location = new System.Drawing.Point(262, 43);
+            this.groupBox2.Location = new System.Drawing.Point(262, 103);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(366, 89);
             this.groupBox2.TabIndex = 13;
@@ -428,11 +451,11 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel시작유무,
-            this.toolStripProgressBar시작유무});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 335);
+            this.toolStripStatusLabel,
+            this.toolStripProgressBar시작유무,
+            this.toolStripStatusLabel시작유무});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 448);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.statusStrip1.Size = new System.Drawing.Size(651, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 14;
@@ -440,9 +463,11 @@
             // 
             // toolStripStatusLabel시작유무
             // 
+            this.toolStripStatusLabel시작유무.AutoSize = false;
             this.toolStripStatusLabel시작유무.Name = "toolStripStatusLabel시작유무";
-            this.toolStripStatusLabel시작유무.Size = new System.Drawing.Size(31, 17);
+            this.toolStripStatusLabel시작유무.Size = new System.Drawing.Size(50, 17);
             this.toolStripStatusLabel시작유무.Text = "정지";
+            this.toolStripStatusLabel시작유무.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // toolStripProgressBar시작유무
             // 
@@ -455,7 +480,7 @@
             this.groupBox3.Controls.Add(this.keysTextBox시작_키);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Location = new System.Drawing.Point(13, 43);
+            this.groupBox3.Location = new System.Drawing.Point(13, 103);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(243, 89);
             this.groupBox3.TabIndex = 15;
@@ -479,6 +504,186 @@
             this.label15.Size = new System.Drawing.Size(45, 12);
             this.label15.TabIndex = 12;
             this.label15.Text = "시작 키";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.파일ToolStripMenuItem,
+            this.도움말ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(651, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 파일ToolStripMenuItem
+            // 
+            this.파일ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.새파일ToolStripMenuItem,
+            this.열기ToolStripMenuItem,
+            this.저장ToolStripMenuItem,
+            this.다른이름으로저장ToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.종료ToolStripMenuItem});
+            this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
+            this.파일ToolStripMenuItem.ShortcutKeyDisplayString = "";
+            this.파일ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
+            this.파일ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.파일ToolStripMenuItem.Text = "파일";
+            // 
+            // 새파일ToolStripMenuItem
+            // 
+            this.새파일ToolStripMenuItem.Name = "새파일ToolStripMenuItem";
+            this.새파일ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.새파일ToolStripMenuItem.Text = "새 파일";
+            this.새파일ToolStripMenuItem.Click += new System.EventHandler(this.새파일ToolStripMenuItem_Click);
+            // 
+            // 열기ToolStripMenuItem
+            // 
+            this.열기ToolStripMenuItem.Name = "열기ToolStripMenuItem";
+            this.열기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.열기ToolStripMenuItem.Text = "열기";
+            this.열기ToolStripMenuItem.Click += new System.EventHandler(this.열기ToolStripMenuItem_Click);
+            // 
+            // 저장ToolStripMenuItem
+            // 
+            this.저장ToolStripMenuItem.Name = "저장ToolStripMenuItem";
+            this.저장ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.저장ToolStripMenuItem.Text = "저장";
+            this.저장ToolStripMenuItem.Click += new System.EventHandler(this.저장ToolStripMenuItem_Click);
+            // 
+            // 다른이름으로저장ToolStripMenuItem
+            // 
+            this.다른이름으로저장ToolStripMenuItem.Name = "다른이름으로저장ToolStripMenuItem";
+            this.다른이름으로저장ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.다른이름으로저장ToolStripMenuItem.Text = "다른 이름으로 저장";
+            this.다른이름으로저장ToolStripMenuItem.Click += new System.EventHandler(this.다른이름으로저장ToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // 종료ToolStripMenuItem
+            // 
+            this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
+            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.종료ToolStripMenuItem.Text = "종료";
+            this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
+            // 
+            // 도움말ToolStripMenuItem
+            // 
+            this.도움말ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.도움말ToolStripMenuItem1,
+            this.toolStripSeparator3,
+            this.홈페이지ToolStripMenuItem,
+            this.업데이트확인ToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.정보ToolStripMenuItem});
+            this.도움말ToolStripMenuItem.Name = "도움말ToolStripMenuItem";
+            this.도움말ToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.도움말ToolStripMenuItem.Text = "도움말";
+            // 
+            // 도움말ToolStripMenuItem1
+            // 
+            this.도움말ToolStripMenuItem1.Name = "도움말ToolStripMenuItem1";
+            this.도움말ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.도움말ToolStripMenuItem1.Text = "도움말";
+            this.도움말ToolStripMenuItem1.Click += new System.EventHandler(this.도움말ToolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            // 
+            // 홈페이지ToolStripMenuItem
+            // 
+            this.홈페이지ToolStripMenuItem.Name = "홈페이지ToolStripMenuItem";
+            this.홈페이지ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.홈페이지ToolStripMenuItem.Text = "홈페이지";
+            this.홈페이지ToolStripMenuItem.Click += new System.EventHandler(this.홈페이지ToolStripMenuItem_Click);
+            // 
+            // 업데이트확인ToolStripMenuItem
+            // 
+            this.업데이트확인ToolStripMenuItem.Name = "업데이트확인ToolStripMenuItem";
+            this.업데이트확인ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.업데이트확인ToolStripMenuItem.Text = "업데이트 확인";
+            this.업데이트확인ToolStripMenuItem.Click += new System.EventHandler(this.업데이트확인ToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // 정보ToolStripMenuItem
+            // 
+            this.정보ToolStripMenuItem.Name = "정보ToolStripMenuItem";
+            this.정보ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.정보ToolStripMenuItem.Text = "정보";
+            this.정보ToolStripMenuItem.Click += new System.EventHandler(this.정보ToolStripMenuItem_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(651, 25);
+            this.toolStrip1.TabIndex = 17;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::MapleMacro2.Properties.Resources.document_24_24;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.ToolTipText = "새 파일";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::MapleMacro2.Properties.Resources.folder_16_16;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.ToolTipText = "열기";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = global::MapleMacro2.Properties.Resources.floppy_disk_24_24;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "저장";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = global::MapleMacro2.Properties.Resources.Info_24_24;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.ToolTipText = "도움말";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.AutoSize = false;
+            this.toolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.toolStripStatusLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(534, 17);
+            this.toolStripStatusLabel.Spring = true;
+            this.toolStripStatusLabel.Text = "프로그램이 시작되었습니다.";
+            this.toolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // keysTextBox종료_키
             // 
@@ -510,14 +715,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 357);
+            this.ClientSize = new System.Drawing.Size(651, 470);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button중지);
             this.Controls.Add(this.button시작);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "MapleMacro2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -530,6 +738,10 @@
             this.statusStrip1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -581,6 +793,27 @@
         private System.Windows.Forms.Label label15;
         private UserControls.KeysTextBox keysTextBox종료_키;
         private UserControls.KeysTextBox keysTextBox시작_키;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 파일ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 새파일ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 열기ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 저장ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 다른이름으로저장ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem 종료ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 도움말ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 도움말ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem 홈페이지ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 업데이트확인ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem 정보ToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
     }
 }
 

@@ -265,5 +265,91 @@ namespace MapleMacro2
         {
             UpdateHotKey();
         }
+
+        #region 상단메뉴
+
+        private void 새파일ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 열기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 저장ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 다른이름으로저장ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 종료ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExitApp();
+        }
+
+        private void 도움말ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 홈페이지ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 업데이트확인ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 정보ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // 새 파일
+        private void CreateNewFile()
+        {
+
+        }
+
+        // 열기
+        private void OpenConfigFile()
+        {
+
+        }
+
+        // 저장
+        private void SaveConfigFile()
+        {
+
+        }
+
+        // 다른 이름으로 저장
+        private void SaveAsConfigFile()
+        {
+
+        }
+
+        // 프로그램 종료
+        private void ExitApp()
+        {
+            if (MessageBox.Show("프로그램을 종료하시겠습니까?", "확인", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) != DialogResult.OK)
+                return;
+
+            // 저장되지 않은 파일 확인 필요
+
+            EndMacro();
+
+            Application.Exit();
+        }
+
+        #endregion 상단메뉴
     }
 }

@@ -98,6 +98,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
     <None Include="Properties\app.manifest" />
@@ -118,6 +119,17 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\document_24_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy_disk_24_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info_24_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_16_16.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
