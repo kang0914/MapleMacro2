@@ -15,8 +15,21 @@ namespace MapleMacro2.Utils
         [DllImport("user32.dll")]
         public static extern IntPtr PostMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
 
-        [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        private static extern uint MapVirtualKey(uint uCode, uint uMapType);
+        [DllImport("user32.dll")]
+        static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, int dwExtraInfo);
+
+        const uint MOUSEEVENTF_ABSOLUTE = 0x8000;
+        const uint MOUSEEVENTF_LEFTDOWN = 0x0002;
+        const uint MOUSEEVENTF_LEFTUP = 0x0004;
+        const uint MOUSEEVENTF_MIDDLEDOWN = 0x0020;
+        const uint MOUSEEVENTF_MIDDLEUP = 0x0040;
+        const uint MOUSEEVENTF_MOVE = 0x0001;
+        const uint MOUSEEVENTF_RIGHTDOWN = 0x0008;
+        const uint MOUSEEVENTF_RIGHTUP = 0x0010;
+        const uint MOUSEEVENTF_XDOWN = 0x0080;
+        const uint MOUSEEVENTF_XUP = 0x0100;
+        const uint MOUSEEVENTF_WHEEL = 0x0800;
+        const uint MOUSEEVENTF_HWHEEL = 0x01000;
 
         public static IntPtr FindWindow(string windowName)
         {
@@ -29,12 +42,12 @@ namespace MapleMacro2.Utils
             return WindowName;
         }
 
-        public static void KeyboardDown(string windowName, Keys keyCode, long lParam)
+        public static void KeyboardDown(string windowName, Keys keyCode)
         {
-            KeyboardDown(FindWindow(windowName), keyCode, lParam);
+            KeyboardDown(FindWindow(windowName), keyCode);
         }
 
-        public static void KeyboardDown(IntPtr hWnd, Keys keyCode, long lParam)
+        public static void KeyboardDown(IntPtr hWnd, Keys keyCode)
         {
             //PostMessage(WindowName, 0x100, (IntPtr)Keys.A, IntPtr.Zero);
             //System.Threading.Thread.Sleep(33);
@@ -47,32 +60,27 @@ namespace MapleMacro2.Utils
             //long lParam = CreateLParam((byte)Keys.IMEAccept, true);
             //long lParam = CreateLParam((byte)keyCode, true);
 
-            PostMessage(hWnd, 0x100, (IntPtr)keyCode, (IntPtr)lParam);
-            //System.Threading.Thread.Sleep(33);
-            //PostMessage(hWnd, 0x101, (IntPtr)keyCode, (IntPtr)CreateLParam((byte)keyCode));
-        }
-
-        private static long CreateLParam(byte scanCode, bool isExtendedKey)
-        {
-            return CreateLParam(1, scanCode, isExtendedKey, false, false);
-        }
-
-        private static long CreateLParam(ushort repeatCount, byte scanCode, bool isExtendedKey, bool downBefore, bool state)
-        {
-            long value = MapVirtualKey((uint)scanCode, 0);
-            
-            value = repeatCount | (scanCode << 16);
-
-            if (isExtendedKey)
-                value = value | 0x01000000;
-
-            if (downBefore)
-                value = value | 0x40000000;
-
-            if (state)
-                value = value | 0x80000000;
-
-            return value;
+            if (keyCode == Keys.LButton)
+            {
+                mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+                mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+            }
+            else if (keyCode == Keys.RButton)
+            {
+                mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0);
+                mouse_event(MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0);
+            }
+            else if (keyCode == Keys.MButton)
+            {
+                mouse_event(MOUSEEVENTF_MIDDLEDOWN, 0, 0, 0, 0);
+                mouse_event(MOUSEEVENTF_MIDDLEUP, 0, 0, 0, 0);
+            }
+            else
+            { 
+                PostMessage(hWnd, 0x100, (IntPtr)keyCode, (IntPtr)Data.KeyboardLParamMaps.GetLParam(keyCode));
+                System.Threading.Thread.Sleep(33);
+                PostMessage(hWnd, 0x101, (IntPtr)keyCode, (IntPtr)Data.KeyboardLParamMaps.GetLParam(keyCode));
+            }
         }
     }
 }

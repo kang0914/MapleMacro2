@@ -84,5 +84,12 @@ namespace MapleMacro2.Utils
 
             return modifiers;
         }
+
+        public static long GetLparam(Keys keys)
+        {
+            long temp = (int)keys << 16;
+
+            return temp;
+        }
     }
 }

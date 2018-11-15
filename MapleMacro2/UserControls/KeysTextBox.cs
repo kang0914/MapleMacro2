@@ -14,6 +14,7 @@ namespace MapleMacro2.UserControls
             base()
         {
             ReadOnly = true;
+            ShortcutsEnabled = false;
         }
 
         private Keys _SelectedKeys;
@@ -45,6 +46,24 @@ namespace MapleMacro2.UserControls
             }
 
             base.OnKeyDown(e);
+        }
+        
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left)
+            {
+                SelectedKeys = Keys.LButton;                
+            }
+            else if(e.Button == MouseButtons.Right)
+            {
+                SelectedKeys = Keys.RButton;
+            }
+            else if (e.Button == MouseButtons.Middle)
+            {
+                SelectedKeys = Keys.MButton;
+            }
+
+            base.OnMouseDown(e);
         }
 
         private void UpdateDisplayText()

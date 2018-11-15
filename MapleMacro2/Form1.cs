@@ -13,7 +13,8 @@ namespace MapleMacro2
 {
     public partial class Form1 : Form
     {
-        private const string PROC_NAME_MAPLE_STORY = "MapleStory";
+        //private const string PROC_NAME_MAPLE_STORY = "MapleStory";
+        private const string PROC_NAME_MAPLE_STORY = "디아블로 III";
 
         public Form1()
         {
@@ -154,6 +155,7 @@ namespace MapleMacro2
         }
 
         private bool IsRunMacro = false;
+        private List<Timer> listKeyTimer = new List<Timer>();
 
         private void StartMacro()
         {
@@ -161,24 +163,13 @@ namespace MapleMacro2
                 return;
 
             IsRunMacro = true;
-
-            // 최초 실행
-            timer1_Tick(null, null);
-            timer2_Tick(null, null);
-            timer3_Tick(null, null);
-            timer4_Tick(null, null);
-
-            // 실행 간격 적용
-            timer1.Interval = delayTextBox기술_1_실행간격.ValueForInt;
-            timer2.Interval = delayTextBox기술_2_실행간격.ValueForInt;
-            timer3.Interval = delayTextBox기술_3_실행간격.ValueForInt;
-            timer4.Interval = delayTextBox기술_4_실행간격.ValueForInt;
-
-            // 타이머 활성화
-            timer1.Enabled = true;
-            timer2.Enabled = true;
-            timer3.Enabled = true;
-            timer4.Enabled = true;
+            
+            Execute(CurrentConfig.FUNC_1);
+            Execute(CurrentConfig.FUNC_2);
+            Execute(CurrentConfig.FUNC_3);
+            Execute(CurrentConfig.FUNC_4);
+            Execute(CurrentConfig.FUNC_5);
+            Execute(CurrentConfig.FUNC_6);
 
             toolStripProgressBar시작유무.Value = 100;
             toolStripStatusLabel시작유무.Text = "동작 중...";
@@ -191,10 +182,13 @@ namespace MapleMacro2
 
             IsRunMacro = false;
 
-            timer1.Enabled = false;
-            timer2.Enabled = false;
-            timer3.Enabled = false;
-            timer4.Enabled = false;
+            foreach (var tmr in listKeyTimer)
+            {
+                tmr.Stop();
+                tmr.Enabled = false;
+                tmr.Dispose();
+            }
+            listKeyTimer.Clear();
 
             toolStripProgressBar시작유무.Value = 0;
             toolStripStatusLabel시작유무.Text = "정지";
@@ -208,45 +202,36 @@ namespace MapleMacro2
                 StartMacro();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Execute(SingleKeysInfo singleKeysInfo)
         {
-            if (timer매크로활성.Enabled)
+            if (singleKeysInfo.KEYS == Keys.None || singleKeysInfo.TIME_DELAY == 0)
                 return;
 
-            if (checkBox기술_1_매크로유무.Checked)
-                Start매크로활성();
+            // 최초 1회 실행
+            SendMessageHelper.KeyboardDown(PROC_NAME_MAPLE_STORY, singleKeysInfo.KEYS);
 
-            SendMessageHelper.KeyboardDown(PROC_NAME_MAPLE_STORY, Keys.A, 0x01E0001);
-        }
+            // 타이머 설정
+            Timer tmr = new Timer();
 
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            if (checkBox기술_2_매크로유무.Checked)
-                Start매크로활성();
+            tmr.Tick += (sender, e) =>
+            {
+                var tempTmr = sender as Timer;
+                var tempSingleKeysInfo = tempTmr.Tag as SingleKeysInfo;
 
-            SendMessageHelper.KeyboardDown(PROC_NAME_MAPLE_STORY, Keys.Insert, 0x1520001);
-        }
+                if (timer매크로활성.Enabled)
+                    return;
 
-        private void timer3_Tick(object sender, EventArgs e)
-        {
-            if (timer매크로활성.Enabled)
-                return;
+                if (tempSingleKeysInfo.IS_MACROD_FUNC)
+                    Start매크로활성();
 
-            if (checkBox기술_3_매크로유무.Checked)
-                Start매크로활성();
+                SendMessageHelper.KeyboardDown(PROC_NAME_MAPLE_STORY, tempSingleKeysInfo.KEYS);
+            };
 
-            SendMessageHelper.KeyboardDown(PROC_NAME_MAPLE_STORY, Keys.Delete, 0x1530001);
-        }
+            tmr.Tag = singleKeysInfo;
+            tmr.Interval = singleKeysInfo.TIME_DELAY;
+            tmr.Enabled = true;
 
-        private void timer4_Tick(object sender, EventArgs e)
-        {
-            if (timer매크로활성.Enabled)
-                return;
-
-            if (checkBox기술_4_매크로유무.Checked)
-                Start매크로활성();
-
-            SendMessageHelper.KeyboardDown(PROC_NAME_MAPLE_STORY, Keys.Z, 0x02C0001);
+            listKeyTimer.Add(tmr);
         }
 
         private void Start매크로활성()
@@ -496,7 +481,9 @@ namespace MapleMacro2
                     FUNC_1 = new SingleKeysInfo() { KEYS = keysTextBox기술_1_키.SelectedKeys, TIME_DELAY = delayTextBox기술_1_실행간격.ValueForInt, IS_MACROD_FUNC = checkBox기술_1_매크로유무.Checked },
                     FUNC_2 = new SingleKeysInfo() { KEYS = keysTextBox기술_2_키.SelectedKeys, TIME_DELAY = delayTextBox기술_2_실행간격.ValueForInt, IS_MACROD_FUNC = checkBox기술_2_매크로유무.Checked },
                     FUNC_3 = new SingleKeysInfo() { KEYS = keysTextBox기술_3_키.SelectedKeys, TIME_DELAY = delayTextBox기술_3_실행간격.ValueForInt, IS_MACROD_FUNC = checkBox기술_3_매크로유무.Checked },
-                    FUNC_4 = new SingleKeysInfo() { KEYS = keysTextBox기술_4_키.SelectedKeys, TIME_DELAY = delayTextBox기술_4_실행간격.ValueForInt, IS_MACROD_FUNC = checkBox기술_4_매크로유무.Checked }
+                    FUNC_4 = new SingleKeysInfo() { KEYS = keysTextBox기술_4_키.SelectedKeys, TIME_DELAY = delayTextBox기술_4_실행간격.ValueForInt, IS_MACROD_FUNC = checkBox기술_4_매크로유무.Checked },
+                    FUNC_5 = new SingleKeysInfo() { KEYS = keysTextBox기술_5_키.SelectedKeys, TIME_DELAY = delayTextBox기술_5_실행간격.ValueForInt, IS_MACROD_FUNC = checkBox기술_5_매크로유무.Checked },
+                    FUNC_6 = new SingleKeysInfo() { KEYS = keysTextBox기술_6_키.SelectedKeys, TIME_DELAY = delayTextBox기술_6_실행간격.ValueForInt, IS_MACROD_FUNC = checkBox기술_6_매크로유무.Checked },
                 };
             }
 
@@ -523,6 +510,14 @@ namespace MapleMacro2
                 keysTextBox기술_4_키.SelectedKeys = value.FUNC_4.KEYS;
                 delayTextBox기술_4_실행간격.ValueForInt = value.FUNC_4.TIME_DELAY;
                 checkBox기술_4_매크로유무.Checked = value.FUNC_4.IS_MACROD_FUNC;
+
+                keysTextBox기술_5_키.SelectedKeys = value.FUNC_4.KEYS;
+                delayTextBox기술_5_실행간격.ValueForInt = value.FUNC_4.TIME_DELAY;
+                checkBox기술_5_매크로유무.Checked = value.FUNC_4.IS_MACROD_FUNC;
+
+                keysTextBox기술_6_키.SelectedKeys = value.FUNC_6.KEYS;
+                delayTextBox기술_6_실행간격.ValueForInt = value.FUNC_6.TIME_DELAY;
+                checkBox기술_6_매크로유무.Checked = value.FUNC_6.IS_MACROD_FUNC;
             }
         }
 

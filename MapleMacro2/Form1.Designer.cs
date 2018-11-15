@@ -31,38 +31,25 @@
             this.components = new System.ComponentModel.Container();
             this.button시작 = new System.Windows.Forms.Button();
             this.button중지 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.timer매크로활성 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.delayTextBox기술_4_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
-            this.delayTextBox기술_3_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
-            this.delayTextBox기술_2_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
-            this.delayTextBox기술_1_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
-            this.keysTextBox기술_4_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.keysTextBox기술_3_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.keysTextBox기술_2_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.keysTextBox기술_1_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.checkBox기술_4_매크로유무 = new System.Windows.Forms.CheckBox();
             this.checkBox기술_3_매크로유무 = new System.Windows.Forms.CheckBox();
             this.checkBox기술_2_매크로유무 = new System.Windows.Forms.CheckBox();
             this.checkBox기술_1_매크로유무 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.delayTextBox설정_매크로_활성_시간 = new MapleMacro2.UserControls.DelayTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -70,8 +57,6 @@
             this.toolStripProgressBar시작유무 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel시작유무 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.keysTextBox종료_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.keysTextBox시작_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -94,17 +79,40 @@
             this.toolStripButton열기 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton저장 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton정보 = new System.Windows.Forms.ToolStripButton();
+            this.checkBox기술_5_매크로유무 = new System.Windows.Forms.CheckBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.checkBox기술_6_매크로유무 = new System.Windows.Forms.CheckBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.keysTextBox종료_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.keysTextBox시작_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.delayTextBox설정_매크로_활성_시간 = new MapleMacro2.UserControls.DelayTextBox();
+            this.delayTextBox기술_6_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
+            this.keysTextBox기술_6_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.delayTextBox기술_5_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
+            this.keysTextBox기술_5_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.delayTextBox기술_4_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
+            this.delayTextBox기술_3_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
+            this.delayTextBox기술_2_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
+            this.delayTextBox기술_1_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
+            this.keysTextBox기술_4_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.keysTextBox기술_3_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.keysTextBox기술_2_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.keysTextBox기술_1_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_4_실행간격)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_3_실행간격)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_2_실행간격)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_1_실행간격)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox설정_매크로_활성_시간)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox설정_매크로_활성_시간)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_6_실행간격)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_5_실행간격)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_4_실행간격)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_3_실행간격)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_2_실행간격)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_1_실행간격)).BeginInit();
             this.SuspendLayout();
             // 
             // button시작
@@ -126,11 +134,6 @@
             this.button중지.Text = "중지";
             this.button중지.UseVisualStyleBackColor = true;
             this.button중지.Click += new System.EventHandler(this.button중지_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label1
             // 
@@ -176,14 +179,6 @@
             this.label5.Size = new System.Drawing.Size(37, 12);
             this.label5.TabIndex = 5;
             this.label5.Text = "msec";
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // timer3
-            // 
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // label6
             // 
@@ -239,10 +234,6 @@
             this.label11.TabIndex = 8;
             this.label11.Text = "4";
             // 
-            // timer4
-            // 
-            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -258,6 +249,16 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.delayTextBox기술_6_실행간격);
+            this.groupBox1.Controls.Add(this.keysTextBox기술_6_키);
+            this.groupBox1.Controls.Add(this.checkBox기술_6_매크로유무);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.Controls.Add(this.delayTextBox기술_5_실행간격);
+            this.groupBox1.Controls.Add(this.keysTextBox기술_5_키);
+            this.groupBox1.Controls.Add(this.checkBox기술_5_매크로유무);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.delayTextBox기술_4_실행간격);
             this.groupBox1.Controls.Add(this.delayTextBox기술_3_실행간격);
             this.groupBox1.Controls.Add(this.delayTextBox기술_2_실행간격);
@@ -282,112 +283,12 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Location = new System.Drawing.Point(262, 195);
+            this.groupBox1.Location = new System.Drawing.Point(227, 198);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(366, 177);
+            this.groupBox1.Size = new System.Drawing.Size(366, 243);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "기술 키";
-            // 
-            // delayTextBox기술_4_실행간격
-            // 
-            this.delayTextBox기술_4_실행간격.Location = new System.Drawing.Point(158, 143);
-            this.delayTextBox기술_4_실행간격.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.delayTextBox기술_4_실행간격.Name = "delayTextBox기술_4_실행간격";
-            this.delayTextBox기술_4_실행간격.Size = new System.Drawing.Size(75, 21);
-            this.delayTextBox기술_4_실행간격.TabIndex = 8;
-            this.delayTextBox기술_4_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.delayTextBox기술_4_실행간격.ValueForInt = 0;
-            // 
-            // delayTextBox기술_3_실행간격
-            // 
-            this.delayTextBox기술_3_실행간격.Location = new System.Drawing.Point(158, 114);
-            this.delayTextBox기술_3_실행간격.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.delayTextBox기술_3_실행간격.Name = "delayTextBox기술_3_실행간격";
-            this.delayTextBox기술_3_실행간격.Size = new System.Drawing.Size(75, 21);
-            this.delayTextBox기술_3_실행간격.TabIndex = 8;
-            this.delayTextBox기술_3_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.delayTextBox기술_3_실행간격.ValueForInt = 0;
-            // 
-            // delayTextBox기술_2_실행간격
-            // 
-            this.delayTextBox기술_2_실행간격.Location = new System.Drawing.Point(158, 87);
-            this.delayTextBox기술_2_실행간격.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.delayTextBox기술_2_실행간격.Name = "delayTextBox기술_2_실행간격";
-            this.delayTextBox기술_2_실행간격.Size = new System.Drawing.Size(75, 21);
-            this.delayTextBox기술_2_실행간격.TabIndex = 8;
-            this.delayTextBox기술_2_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.delayTextBox기술_2_실행간격.ValueForInt = 0;
-            // 
-            // delayTextBox기술_1_실행간격
-            // 
-            this.delayTextBox기술_1_실행간격.Location = new System.Drawing.Point(158, 59);
-            this.delayTextBox기술_1_실행간격.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.delayTextBox기술_1_실행간격.Name = "delayTextBox기술_1_실행간격";
-            this.delayTextBox기술_1_실행간격.Size = new System.Drawing.Size(75, 21);
-            this.delayTextBox기술_1_실행간격.TabIndex = 8;
-            this.delayTextBox기술_1_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.delayTextBox기술_1_실행간격.ValueForInt = 0;
-            // 
-            // keysTextBox기술_4_키
-            // 
-            this.keysTextBox기술_4_키.Location = new System.Drawing.Point(52, 143);
-            this.keysTextBox기술_4_키.Name = "keysTextBox기술_4_키";
-            this.keysTextBox기술_4_키.ReadOnly = true;
-            this.keysTextBox기술_4_키.SelectedKeys = System.Windows.Forms.Keys.None;
-            this.keysTextBox기술_4_키.Size = new System.Drawing.Size(100, 21);
-            this.keysTextBox기술_4_키.TabIndex = 12;
-            this.keysTextBox기술_4_키.Text = "None";
-            this.keysTextBox기술_4_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // keysTextBox기술_3_키
-            // 
-            this.keysTextBox기술_3_키.Location = new System.Drawing.Point(52, 114);
-            this.keysTextBox기술_3_키.Name = "keysTextBox기술_3_키";
-            this.keysTextBox기술_3_키.ReadOnly = true;
-            this.keysTextBox기술_3_키.SelectedKeys = System.Windows.Forms.Keys.None;
-            this.keysTextBox기술_3_키.Size = new System.Drawing.Size(100, 21);
-            this.keysTextBox기술_3_키.TabIndex = 12;
-            this.keysTextBox기술_3_키.Text = "None";
-            this.keysTextBox기술_3_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // keysTextBox기술_2_키
-            // 
-            this.keysTextBox기술_2_키.Location = new System.Drawing.Point(52, 87);
-            this.keysTextBox기술_2_키.Name = "keysTextBox기술_2_키";
-            this.keysTextBox기술_2_키.ReadOnly = true;
-            this.keysTextBox기술_2_키.SelectedKeys = System.Windows.Forms.Keys.None;
-            this.keysTextBox기술_2_키.Size = new System.Drawing.Size(100, 21);
-            this.keysTextBox기술_2_키.TabIndex = 12;
-            this.keysTextBox기술_2_키.Text = "None";
-            this.keysTextBox기술_2_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // keysTextBox기술_1_키
-            // 
-            this.keysTextBox기술_1_키.Location = new System.Drawing.Point(52, 59);
-            this.keysTextBox기술_1_키.Name = "keysTextBox기술_1_키";
-            this.keysTextBox기술_1_키.ReadOnly = true;
-            this.keysTextBox기술_1_키.SelectedKeys = System.Windows.Forms.Keys.None;
-            this.keysTextBox기술_1_키.Size = new System.Drawing.Size(100, 21);
-            this.keysTextBox기술_1_키.TabIndex = 12;
-            this.keysTextBox기술_1_키.Text = "None";
-            this.keysTextBox기술_1_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // checkBox기술_4_매크로유무
             // 
@@ -430,26 +331,12 @@
             this.groupBox2.Controls.Add(this.delayTextBox설정_매크로_활성_시간);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Location = new System.Drawing.Point(262, 103);
+            this.groupBox2.Location = new System.Drawing.Point(227, 103);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(366, 89);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "설정";
-            // 
-            // delayTextBox설정_매크로_활성_시간
-            // 
-            this.delayTextBox설정_매크로_활성_시간.Location = new System.Drawing.Point(123, 29);
-            this.delayTextBox설정_매크로_활성_시간.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.delayTextBox설정_매크로_활성_시간.Name = "delayTextBox설정_매크로_활성_시간";
-            this.delayTextBox설정_매크로_활성_시간.Size = new System.Drawing.Size(73, 21);
-            this.delayTextBox설정_매크로_활성_시간.TabIndex = 8;
-            this.delayTextBox설정_매크로_활성_시간.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.delayTextBox설정_매크로_활성_시간.ValueForInt = 0;
             // 
             // label14
             // 
@@ -475,9 +362,9 @@
             this.toolStripStatusLabel,
             this.toolStripProgressBar시작유무,
             this.toolStripStatusLabel시작유무});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 448);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 461);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(651, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(610, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 14;
             this.statusStrip1.Text = "statusStrip1";
@@ -488,7 +375,7 @@
             this.toolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.toolStripStatusLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(534, 17);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(493, 17);
             this.toolStripStatusLabel.Spring = true;
             this.toolStripStatusLabel.Text = "프로그램이 시작되었습니다.";
             this.toolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -514,34 +401,10 @@
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Location = new System.Drawing.Point(13, 103);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(243, 89);
+            this.groupBox3.Size = new System.Drawing.Size(208, 89);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "시작/종료 키";
-            // 
-            // keysTextBox종료_키
-            // 
-            this.keysTextBox종료_키.Location = new System.Drawing.Point(90, 51);
-            this.keysTextBox종료_키.Name = "keysTextBox종료_키";
-            this.keysTextBox종료_키.ReadOnly = true;
-            this.keysTextBox종료_키.SelectedKeys = System.Windows.Forms.Keys.None;
-            this.keysTextBox종료_키.Size = new System.Drawing.Size(100, 21);
-            this.keysTextBox종료_키.TabIndex = 13;
-            this.keysTextBox종료_키.Text = "None";
-            this.keysTextBox종료_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.keysTextBox종료_키.KeysChanged += new System.EventHandler(this.keysTextBox종료_키_KeysChanged);
-            // 
-            // keysTextBox시작_키
-            // 
-            this.keysTextBox시작_키.Location = new System.Drawing.Point(90, 24);
-            this.keysTextBox시작_키.Name = "keysTextBox시작_키";
-            this.keysTextBox시작_키.ReadOnly = true;
-            this.keysTextBox시작_키.SelectedKeys = System.Windows.Forms.Keys.None;
-            this.keysTextBox시작_키.Size = new System.Drawing.Size(100, 21);
-            this.keysTextBox시작_키.TabIndex = 13;
-            this.keysTextBox시작_키.Text = "None";
-            this.keysTextBox시작_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.keysTextBox시작_키.KeysChanged += new System.EventHandler(this.keysTextBox시작_키_KeysChanged);
             // 
             // label16
             // 
@@ -568,7 +431,7 @@
             this.도움말ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(651, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(610, 24);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -687,7 +550,7 @@
             this.toolStripButton정보});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(651, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(610, 25);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -734,11 +597,253 @@
             this.toolStripButton정보.ToolTipText = "도움말";
             this.toolStripButton정보.Click += new System.EventHandler(this.toolStripButton정보_Click);
             // 
+            // checkBox기술_5_매크로유무
+            // 
+            this.checkBox기술_5_매크로유무.AutoSize = true;
+            this.checkBox기술_5_매크로유무.Location = new System.Drawing.Point(316, 177);
+            this.checkBox기술_5_매크로유무.Name = "checkBox기술_5_매크로유무";
+            this.checkBox기술_5_매크로유무.Size = new System.Drawing.Size(15, 14);
+            this.checkBox기술_5_매크로유무.TabIndex = 16;
+            this.checkBox기술_5_매크로유무.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(243, 177);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(37, 12);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "msec";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(23, 179);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(11, 12);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "5";
+            // 
+            // checkBox기술_6_매크로유무
+            // 
+            this.checkBox기술_6_매크로유무.AutoSize = true;
+            this.checkBox기술_6_매크로유무.Location = new System.Drawing.Point(316, 206);
+            this.checkBox기술_6_매크로유무.Name = "checkBox기술_6_매크로유무";
+            this.checkBox기술_6_매크로유무.Size = new System.Drawing.Size(15, 14);
+            this.checkBox기술_6_매크로유무.TabIndex = 21;
+            this.checkBox기술_6_매크로유무.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(243, 206);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(37, 12);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "msec";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(23, 208);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(11, 12);
+            this.label20.TabIndex = 20;
+            this.label20.Text = "6";
+            // 
+            // keysTextBox종료_키
+            // 
+            this.keysTextBox종료_키.Location = new System.Drawing.Point(90, 51);
+            this.keysTextBox종료_키.Name = "keysTextBox종료_키";
+            this.keysTextBox종료_키.ReadOnly = true;
+            this.keysTextBox종료_키.SelectedKeys = System.Windows.Forms.Keys.None;
+            this.keysTextBox종료_키.Size = new System.Drawing.Size(100, 21);
+            this.keysTextBox종료_키.TabIndex = 13;
+            this.keysTextBox종료_키.Text = "None";
+            this.keysTextBox종료_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.keysTextBox종료_키.KeysChanged += new System.EventHandler(this.keysTextBox종료_키_KeysChanged);
+            // 
+            // keysTextBox시작_키
+            // 
+            this.keysTextBox시작_키.Location = new System.Drawing.Point(90, 24);
+            this.keysTextBox시작_키.Name = "keysTextBox시작_키";
+            this.keysTextBox시작_키.ReadOnly = true;
+            this.keysTextBox시작_키.SelectedKeys = System.Windows.Forms.Keys.None;
+            this.keysTextBox시작_키.Size = new System.Drawing.Size(100, 21);
+            this.keysTextBox시작_키.TabIndex = 13;
+            this.keysTextBox시작_키.Text = "None";
+            this.keysTextBox시작_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.keysTextBox시작_키.KeysChanged += new System.EventHandler(this.keysTextBox시작_키_KeysChanged);
+            // 
+            // delayTextBox설정_매크로_활성_시간
+            // 
+            this.delayTextBox설정_매크로_활성_시간.Location = new System.Drawing.Point(123, 29);
+            this.delayTextBox설정_매크로_활성_시간.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.delayTextBox설정_매크로_활성_시간.Name = "delayTextBox설정_매크로_활성_시간";
+            this.delayTextBox설정_매크로_활성_시간.Size = new System.Drawing.Size(73, 21);
+            this.delayTextBox설정_매크로_활성_시간.TabIndex = 8;
+            this.delayTextBox설정_매크로_활성_시간.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.delayTextBox설정_매크로_활성_시간.ValueForInt = 0;
+            // 
+            // delayTextBox기술_6_실행간격
+            // 
+            this.delayTextBox기술_6_실행간격.Location = new System.Drawing.Point(158, 203);
+            this.delayTextBox기술_6_실행간격.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.delayTextBox기술_6_실행간격.Name = "delayTextBox기술_6_실행간격";
+            this.delayTextBox기술_6_실행간격.Size = new System.Drawing.Size(75, 21);
+            this.delayTextBox기술_6_실행간격.TabIndex = 19;
+            this.delayTextBox기술_6_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.delayTextBox기술_6_실행간격.ValueForInt = 0;
+            // 
+            // keysTextBox기술_6_키
+            // 
+            this.keysTextBox기술_6_키.Location = new System.Drawing.Point(52, 203);
+            this.keysTextBox기술_6_키.Name = "keysTextBox기술_6_키";
+            this.keysTextBox기술_6_키.ReadOnly = true;
+            this.keysTextBox기술_6_키.SelectedKeys = System.Windows.Forms.Keys.None;
+            this.keysTextBox기술_6_키.Size = new System.Drawing.Size(100, 21);
+            this.keysTextBox기술_6_키.TabIndex = 22;
+            this.keysTextBox기술_6_키.Text = "None";
+            this.keysTextBox기술_6_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // delayTextBox기술_5_실행간격
+            // 
+            this.delayTextBox기술_5_실행간격.Location = new System.Drawing.Point(158, 174);
+            this.delayTextBox기술_5_실행간격.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.delayTextBox기술_5_실행간격.Name = "delayTextBox기술_5_실행간격";
+            this.delayTextBox기술_5_실행간격.Size = new System.Drawing.Size(75, 21);
+            this.delayTextBox기술_5_실행간격.TabIndex = 14;
+            this.delayTextBox기술_5_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.delayTextBox기술_5_실행간격.ValueForInt = 0;
+            // 
+            // keysTextBox기술_5_키
+            // 
+            this.keysTextBox기술_5_키.Location = new System.Drawing.Point(52, 174);
+            this.keysTextBox기술_5_키.Name = "keysTextBox기술_5_키";
+            this.keysTextBox기술_5_키.ReadOnly = true;
+            this.keysTextBox기술_5_키.SelectedKeys = System.Windows.Forms.Keys.None;
+            this.keysTextBox기술_5_키.Size = new System.Drawing.Size(100, 21);
+            this.keysTextBox기술_5_키.TabIndex = 17;
+            this.keysTextBox기술_5_키.Text = "None";
+            this.keysTextBox기술_5_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // delayTextBox기술_4_실행간격
+            // 
+            this.delayTextBox기술_4_실행간격.Location = new System.Drawing.Point(158, 143);
+            this.delayTextBox기술_4_실행간격.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.delayTextBox기술_4_실행간격.Name = "delayTextBox기술_4_실행간격";
+            this.delayTextBox기술_4_실행간격.Size = new System.Drawing.Size(75, 21);
+            this.delayTextBox기술_4_실행간격.TabIndex = 8;
+            this.delayTextBox기술_4_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.delayTextBox기술_4_실행간격.ValueForInt = 0;
+            // 
+            // delayTextBox기술_3_실행간격
+            // 
+            this.delayTextBox기술_3_실행간격.Location = new System.Drawing.Point(158, 114);
+            this.delayTextBox기술_3_실행간격.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.delayTextBox기술_3_실행간격.Name = "delayTextBox기술_3_실행간격";
+            this.delayTextBox기술_3_실행간격.Size = new System.Drawing.Size(75, 21);
+            this.delayTextBox기술_3_실행간격.TabIndex = 8;
+            this.delayTextBox기술_3_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.delayTextBox기술_3_실행간격.ValueForInt = 0;
+            // 
+            // delayTextBox기술_2_실행간격
+            // 
+            this.delayTextBox기술_2_실행간격.Location = new System.Drawing.Point(158, 87);
+            this.delayTextBox기술_2_실행간격.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.delayTextBox기술_2_실행간격.Name = "delayTextBox기술_2_실행간격";
+            this.delayTextBox기술_2_실행간격.Size = new System.Drawing.Size(75, 21);
+            this.delayTextBox기술_2_실행간격.TabIndex = 8;
+            this.delayTextBox기술_2_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.delayTextBox기술_2_실행간격.ValueForInt = 0;
+            // 
+            // delayTextBox기술_1_실행간격
+            // 
+            this.delayTextBox기술_1_실행간격.Location = new System.Drawing.Point(158, 59);
+            this.delayTextBox기술_1_실행간격.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.delayTextBox기술_1_실행간격.Name = "delayTextBox기술_1_실행간격";
+            this.delayTextBox기술_1_실행간격.Size = new System.Drawing.Size(75, 21);
+            this.delayTextBox기술_1_실행간격.TabIndex = 8;
+            this.delayTextBox기술_1_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.delayTextBox기술_1_실행간격.ValueForInt = 0;
+            // 
+            // keysTextBox기술_4_키
+            // 
+            this.keysTextBox기술_4_키.Location = new System.Drawing.Point(52, 143);
+            this.keysTextBox기술_4_키.Name = "keysTextBox기술_4_키";
+            this.keysTextBox기술_4_키.ReadOnly = true;
+            this.keysTextBox기술_4_키.SelectedKeys = System.Windows.Forms.Keys.None;
+            this.keysTextBox기술_4_키.Size = new System.Drawing.Size(100, 21);
+            this.keysTextBox기술_4_키.TabIndex = 12;
+            this.keysTextBox기술_4_키.Text = "None";
+            this.keysTextBox기술_4_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // keysTextBox기술_3_키
+            // 
+            this.keysTextBox기술_3_키.Location = new System.Drawing.Point(52, 114);
+            this.keysTextBox기술_3_키.Name = "keysTextBox기술_3_키";
+            this.keysTextBox기술_3_키.ReadOnly = true;
+            this.keysTextBox기술_3_키.SelectedKeys = System.Windows.Forms.Keys.None;
+            this.keysTextBox기술_3_키.Size = new System.Drawing.Size(100, 21);
+            this.keysTextBox기술_3_키.TabIndex = 12;
+            this.keysTextBox기술_3_키.Text = "None";
+            this.keysTextBox기술_3_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // keysTextBox기술_2_키
+            // 
+            this.keysTextBox기술_2_키.Location = new System.Drawing.Point(52, 87);
+            this.keysTextBox기술_2_키.Name = "keysTextBox기술_2_키";
+            this.keysTextBox기술_2_키.ReadOnly = true;
+            this.keysTextBox기술_2_키.SelectedKeys = System.Windows.Forms.Keys.None;
+            this.keysTextBox기술_2_키.Size = new System.Drawing.Size(100, 21);
+            this.keysTextBox기술_2_키.TabIndex = 12;
+            this.keysTextBox기술_2_키.Text = "None";
+            this.keysTextBox기술_2_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // keysTextBox기술_1_키
+            // 
+            this.keysTextBox기술_1_키.Location = new System.Drawing.Point(52, 59);
+            this.keysTextBox기술_1_키.Name = "keysTextBox기술_1_키";
+            this.keysTextBox기술_1_키.ReadOnly = true;
+            this.keysTextBox기술_1_키.SelectedKeys = System.Windows.Forms.Keys.None;
+            this.keysTextBox기술_1_키.Size = new System.Drawing.Size(100, 21);
+            this.keysTextBox기술_1_키.TabIndex = 12;
+            this.keysTextBox기술_1_키.Text = "None";
+            this.keysTextBox기술_1_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 470);
+            this.ClientSize = new System.Drawing.Size(610, 483);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.statusStrip1);
@@ -755,13 +860,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_4_실행간격)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_3_실행간격)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_2_실행간격)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_1_실행간격)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox설정_매크로_활성_시간)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -770,6 +870,13 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox설정_매크로_활성_시간)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_6_실행간격)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_5_실행간격)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_4_실행간격)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_3_실행간격)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_2_실행간격)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_1_실행간격)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -779,21 +886,17 @@
 
         private System.Windows.Forms.Button button시작;
         private System.Windows.Forms.Button button중지;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox checkBox기술_1_매크로유무;
         private System.Windows.Forms.CheckBox checkBox기술_2_매크로유무;
@@ -842,6 +945,16 @@
         private UserControls.DelayTextBox delayTextBox기술_2_실행간격;
         private UserControls.DelayTextBox delayTextBox기술_1_실행간격;
         private UserControls.DelayTextBox delayTextBox설정_매크로_활성_시간;
+        private UserControls.DelayTextBox delayTextBox기술_6_실행간격;
+        private UserControls.KeysTextBox keysTextBox기술_6_키;
+        private System.Windows.Forms.CheckBox checkBox기술_6_매크로유무;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private UserControls.DelayTextBox delayTextBox기술_5_실행간격;
+        private UserControls.KeysTextBox keysTextBox기술_5_키;
+        private System.Windows.Forms.CheckBox checkBox기술_5_매크로유무;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }
 

@@ -17,6 +17,8 @@ namespace MapleMacro2.Data
         public SingleKeysInfo FUNC_2 { get; set; }
         public SingleKeysInfo FUNC_3 { get; set; }
         public SingleKeysInfo FUNC_4 { get; set; }
+        public SingleKeysInfo FUNC_5 { get; set; }
+        public SingleKeysInfo FUNC_6 { get; set; }
 
         public MapleMacro2Config()
         {
@@ -24,6 +26,8 @@ namespace MapleMacro2.Data
             FUNC_2 = new SingleKeysInfo();
             FUNC_3 = new SingleKeysInfo();
             FUNC_4 = new SingleKeysInfo();
+            FUNC_5 = new SingleKeysInfo();
+            FUNC_6 = new SingleKeysInfo();
         }
     }
 }
