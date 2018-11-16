@@ -1,4 +1,5 @@
 ﻿using MapleMacro2.Data;
+using MapleMacro2.UI;
 using MapleMacro2.Utils;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,6 @@ namespace MapleMacro2
 {
     public partial class Form1 : Form
     {
-        private const string PROGRAM_NAME = "Maple Macro 2";
-
-        //private const string PROCESS_NAME_TARGET = "MapleStory";
-        private const string PROCESS_NAME_TARGET = "디아블로 III";
-
         public Form1()
         {
             InitializeComponent();
@@ -317,7 +313,7 @@ namespace MapleMacro2
                 return;
 
             // 최초 1회 실행
-            SendMessageHelper.KeyboardDown(PROCESS_NAME_TARGET, singleKeysInfo.KEYS);
+            SendMessageHelper.KeyboardDown(Properties.Settings.Default.SELECTED_GAME_TITLE, singleKeysInfo.KEYS);
 
             // 타이머 설정
             Timer tmr = new Timer();
@@ -333,7 +329,7 @@ namespace MapleMacro2
                 if (tempSingleKeysInfo.IS_MACROD_FUNC)
                     Start매크로활성();
 
-                SendMessageHelper.KeyboardDown(PROCESS_NAME_TARGET, tempSingleKeysInfo.KEYS);
+                SendMessageHelper.KeyboardDown(Properties.Settings.Default.SELECTED_GAME_TITLE, tempSingleKeysInfo.KEYS);
             };
 
             tmr.Tag = singleKeysInfo;
@@ -451,6 +447,13 @@ namespace MapleMacro2
         private void toolStripButton정보_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void 옵션ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F9000 form = new F9000();
+
+            form.ShowDialog();
         }
 
         // 새 파일
@@ -692,7 +695,7 @@ namespace MapleMacro2
             if (IS_CHANGED)
                 tempFileName = $"*{tempFileName}";
 
-            this.Text = $"{tempFileName} - {PROGRAM_NAME}";
+            this.Text = $"{tempFileName} - {GlobalCode.PROGRAM_NAME}";
         }
 
         #region keysTextBox 공통 처리

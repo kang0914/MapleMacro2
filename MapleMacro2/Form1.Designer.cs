@@ -45,17 +45,30 @@
             this.label12 = new System.Windows.Forms.Label();
             this.timer매크로활성 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.delayTextBox기술_6_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
+            this.keysTextBox기술_6_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.checkBox기술_6_매크로유무 = new System.Windows.Forms.CheckBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.delayTextBox기술_5_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
+            this.keysTextBox기술_5_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.checkBox기술_5_매크로유무 = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.delayTextBox기술_4_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
+            this.delayTextBox기술_3_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
+            this.delayTextBox기술_2_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
+            this.delayTextBox기술_1_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
+            this.keysTextBox기술_4_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.keysTextBox기술_3_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.keysTextBox기술_2_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.keysTextBox기술_1_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.checkBox기술_4_매크로유무 = new System.Windows.Forms.CheckBox();
             this.checkBox기술_3_매크로유무 = new System.Windows.Forms.CheckBox();
             this.checkBox기술_2_매크로유무 = new System.Windows.Forms.CheckBox();
             this.checkBox기술_1_매크로유무 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.delayTextBox설정_매크로_활성_시간 = new MapleMacro2.UserControls.DelayTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -63,6 +76,8 @@
             this.toolStripProgressBar시작유무 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel시작유무 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.keysTextBox종료_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.keysTextBox시작_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -84,37 +99,24 @@
             this.정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton새파일 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton열기 = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripButton저장 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton정보 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton열기 = new System.Windows.Forms.ToolStripSplitButton();
-            this.keysTextBox종료_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.keysTextBox시작_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.delayTextBox설정_매크로_활성_시간 = new MapleMacro2.UserControls.DelayTextBox();
-            this.delayTextBox기술_6_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
-            this.keysTextBox기술_6_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.delayTextBox기술_5_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
-            this.keysTextBox기술_5_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.delayTextBox기술_4_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
-            this.delayTextBox기술_3_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
-            this.delayTextBox기술_2_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
-            this.delayTextBox기술_1_실행간격 = new MapleMacro2.UserControls.DelayTextBox();
-            this.keysTextBox기술_4_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.keysTextBox기술_3_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.keysTextBox기술_2_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.keysTextBox기술_1_키 = new MapleMacro2.UserControls.KeysTextBox();
+            this.옵션ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox설정_매크로_활성_시간)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_6_실행간격)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_5_실행간격)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_4_실행간격)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_3_실행간격)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_2_실행간격)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_1_실행간격)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox설정_매크로_활성_시간)).BeginInit();
+            this.statusStrip1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button시작
@@ -292,423 +294,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "기술 키";
             // 
-            // checkBox기술_6_매크로유무
-            // 
-            this.checkBox기술_6_매크로유무.AutoSize = true;
-            this.checkBox기술_6_매크로유무.Location = new System.Drawing.Point(316, 206);
-            this.checkBox기술_6_매크로유무.Name = "checkBox기술_6_매크로유무";
-            this.checkBox기술_6_매크로유무.Size = new System.Drawing.Size(15, 14);
-            this.checkBox기술_6_매크로유무.TabIndex = 21;
-            this.checkBox기술_6_매크로유무.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(243, 206);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 12);
-            this.label19.TabIndex = 18;
-            this.label19.Text = "msec";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(23, 208);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(11, 12);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "6";
-            // 
-            // checkBox기술_5_매크로유무
-            // 
-            this.checkBox기술_5_매크로유무.AutoSize = true;
-            this.checkBox기술_5_매크로유무.Location = new System.Drawing.Point(316, 177);
-            this.checkBox기술_5_매크로유무.Name = "checkBox기술_5_매크로유무";
-            this.checkBox기술_5_매크로유무.Size = new System.Drawing.Size(15, 14);
-            this.checkBox기술_5_매크로유무.TabIndex = 16;
-            this.checkBox기술_5_매크로유무.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(243, 177);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(37, 12);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "msec";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(23, 179);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(11, 12);
-            this.label18.TabIndex = 15;
-            this.label18.Text = "5";
-            // 
-            // checkBox기술_4_매크로유무
-            // 
-            this.checkBox기술_4_매크로유무.AutoSize = true;
-            this.checkBox기술_4_매크로유무.Location = new System.Drawing.Point(316, 146);
-            this.checkBox기술_4_매크로유무.Name = "checkBox기술_4_매크로유무";
-            this.checkBox기술_4_매크로유무.Size = new System.Drawing.Size(15, 14);
-            this.checkBox기술_4_매크로유무.TabIndex = 11;
-            this.checkBox기술_4_매크로유무.UseVisualStyleBackColor = true;
-            // 
-            // checkBox기술_3_매크로유무
-            // 
-            this.checkBox기술_3_매크로유무.AutoSize = true;
-            this.checkBox기술_3_매크로유무.Location = new System.Drawing.Point(316, 117);
-            this.checkBox기술_3_매크로유무.Name = "checkBox기술_3_매크로유무";
-            this.checkBox기술_3_매크로유무.Size = new System.Drawing.Size(15, 14);
-            this.checkBox기술_3_매크로유무.TabIndex = 11;
-            this.checkBox기술_3_매크로유무.UseVisualStyleBackColor = true;
-            // 
-            // checkBox기술_2_매크로유무
-            // 
-            this.checkBox기술_2_매크로유무.AutoSize = true;
-            this.checkBox기술_2_매크로유무.Location = new System.Drawing.Point(316, 90);
-            this.checkBox기술_2_매크로유무.Name = "checkBox기술_2_매크로유무";
-            this.checkBox기술_2_매크로유무.Size = new System.Drawing.Size(15, 14);
-            this.checkBox기술_2_매크로유무.TabIndex = 11;
-            this.checkBox기술_2_매크로유무.UseVisualStyleBackColor = true;
-            // 
-            // checkBox기술_1_매크로유무
-            // 
-            this.checkBox기술_1_매크로유무.AutoSize = true;
-            this.checkBox기술_1_매크로유무.Location = new System.Drawing.Point(316, 62);
-            this.checkBox기술_1_매크로유무.Name = "checkBox기술_1_매크로유무";
-            this.checkBox기술_1_매크로유무.Size = new System.Drawing.Size(15, 14);
-            this.checkBox기술_1_매크로유무.TabIndex = 11;
-            this.checkBox기술_1_매크로유무.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.delayTextBox설정_매크로_활성_시간);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Location = new System.Drawing.Point(227, 103);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(366, 89);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "설정";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(202, 34);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 12);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "msec";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(17, 35);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(97, 12);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "매크로 활성 시간";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel,
-            this.toolStripProgressBar시작유무,
-            this.toolStripStatusLabel시작유무});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 461);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(610, 22);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 14;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.AutoSize = false;
-            this.toolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.toolStripStatusLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(493, 17);
-            this.toolStripStatusLabel.Spring = true;
-            this.toolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // toolStripProgressBar시작유무
-            // 
-            this.toolStripProgressBar시작유무.Name = "toolStripProgressBar시작유무";
-            this.toolStripProgressBar시작유무.Size = new System.Drawing.Size(50, 16);
-            // 
-            // toolStripStatusLabel시작유무
-            // 
-            this.toolStripStatusLabel시작유무.AutoSize = false;
-            this.toolStripStatusLabel시작유무.Name = "toolStripStatusLabel시작유무";
-            this.toolStripStatusLabel시작유무.Size = new System.Drawing.Size(50, 17);
-            this.toolStripStatusLabel시작유무.Text = "정지";
-            this.toolStripStatusLabel시작유무.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.keysTextBox종료_키);
-            this.groupBox3.Controls.Add(this.keysTextBox시작_키);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Location = new System.Drawing.Point(13, 103);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(208, 89);
-            this.groupBox3.TabIndex = 15;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "시작/종료 키";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(21, 57);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(45, 12);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "종료 키";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(21, 29);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(45, 12);
-            this.label15.TabIndex = 12;
-            this.label15.Text = "시작 키";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.파일ToolStripMenuItem,
-            this.도움말ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(610, 24);
-            this.menuStrip1.TabIndex = 16;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // 파일ToolStripMenuItem
-            // 
-            this.파일ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.새파일ToolStripMenuItem,
-            this.열기ToolStripMenuItem,
-            this.저장ToolStripMenuItem,
-            this.다른이름으로저장ToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.최근에사용한설정파일ToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.종료ToolStripMenuItem});
-            this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
-            this.파일ToolStripMenuItem.ShortcutKeyDisplayString = "";
-            this.파일ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
-            this.파일ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.파일ToolStripMenuItem.Text = "파일";
-            // 
-            // 새파일ToolStripMenuItem
-            // 
-            this.새파일ToolStripMenuItem.Name = "새파일ToolStripMenuItem";
-            this.새파일ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.새파일ToolStripMenuItem.Text = "새 파일";
-            this.새파일ToolStripMenuItem.Click += new System.EventHandler(this.새파일ToolStripMenuItem_Click);
-            // 
-            // 열기ToolStripMenuItem
-            // 
-            this.열기ToolStripMenuItem.Name = "열기ToolStripMenuItem";
-            this.열기ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.열기ToolStripMenuItem.Text = "열기";
-            this.열기ToolStripMenuItem.Click += new System.EventHandler(this.열기ToolStripMenuItem_Click);
-            // 
-            // 저장ToolStripMenuItem
-            // 
-            this.저장ToolStripMenuItem.Name = "저장ToolStripMenuItem";
-            this.저장ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.저장ToolStripMenuItem.Text = "저장";
-            this.저장ToolStripMenuItem.Click += new System.EventHandler(this.저장ToolStripMenuItem_Click);
-            // 
-            // 다른이름으로저장ToolStripMenuItem
-            // 
-            this.다른이름으로저장ToolStripMenuItem.Name = "다른이름으로저장ToolStripMenuItem";
-            this.다른이름으로저장ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.다른이름으로저장ToolStripMenuItem.Text = "다른 이름으로 저장";
-            this.다른이름으로저장ToolStripMenuItem.Click += new System.EventHandler(this.다른이름으로저장ToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(203, 6);
-            // 
-            // 최근에사용한설정파일ToolStripMenuItem
-            // 
-            this.최근에사용한설정파일ToolStripMenuItem.Name = "최근에사용한설정파일ToolStripMenuItem";
-            this.최근에사용한설정파일ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.최근에사용한설정파일ToolStripMenuItem.Text = "최근에 사용한 설정 파일";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(203, 6);
-            // 
-            // 종료ToolStripMenuItem
-            // 
-            this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
-            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.종료ToolStripMenuItem.Text = "종료";
-            this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
-            // 
-            // 도움말ToolStripMenuItem
-            // 
-            this.도움말ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.도움말ToolStripMenuItem1,
-            this.toolStripSeparator3,
-            this.홈페이지ToolStripMenuItem,
-            this.업데이트확인ToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.정보ToolStripMenuItem});
-            this.도움말ToolStripMenuItem.Name = "도움말ToolStripMenuItem";
-            this.도움말ToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.도움말ToolStripMenuItem.Text = "도움말";
-            // 
-            // 도움말ToolStripMenuItem1
-            // 
-            this.도움말ToolStripMenuItem1.Name = "도움말ToolStripMenuItem1";
-            this.도움말ToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
-            this.도움말ToolStripMenuItem1.Text = "도움말";
-            this.도움말ToolStripMenuItem1.Click += new System.EventHandler(this.도움말ToolStripMenuItem1_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(147, 6);
-            // 
-            // 홈페이지ToolStripMenuItem
-            // 
-            this.홈페이지ToolStripMenuItem.Name = "홈페이지ToolStripMenuItem";
-            this.홈페이지ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.홈페이지ToolStripMenuItem.Text = "홈페이지";
-            this.홈페이지ToolStripMenuItem.Click += new System.EventHandler(this.홈페이지ToolStripMenuItem_Click);
-            // 
-            // 업데이트확인ToolStripMenuItem
-            // 
-            this.업데이트확인ToolStripMenuItem.Name = "업데이트확인ToolStripMenuItem";
-            this.업데이트확인ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.업데이트확인ToolStripMenuItem.Text = "업데이트 확인";
-            this.업데이트확인ToolStripMenuItem.Click += new System.EventHandler(this.업데이트확인ToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(147, 6);
-            // 
-            // 정보ToolStripMenuItem
-            // 
-            this.정보ToolStripMenuItem.Name = "정보ToolStripMenuItem";
-            this.정보ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.정보ToolStripMenuItem.Text = "정보";
-            this.정보ToolStripMenuItem.Click += new System.EventHandler(this.정보ToolStripMenuItem_Click);
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton새파일,
-            this.toolStripButton열기,
-            this.toolStripButton저장,
-            this.toolStripButton정보});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(610, 25);
-            this.toolStrip1.TabIndex = 17;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton새파일
-            // 
-            this.toolStripButton새파일.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton새파일.Image = global::MapleMacro2.Properties.Resources.document_24_24;
-            this.toolStripButton새파일.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton새파일.Name = "toolStripButton새파일";
-            this.toolStripButton새파일.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton새파일.Text = "toolStripButton1";
-            this.toolStripButton새파일.ToolTipText = "새 파일";
-            this.toolStripButton새파일.Click += new System.EventHandler(this.toolStripButton새파일_Click);
-            // 
-            // toolStripButton저장
-            // 
-            this.toolStripButton저장.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton저장.Image = global::MapleMacro2.Properties.Resources.floppy_disk_24_24;
-            this.toolStripButton저장.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton저장.Name = "toolStripButton저장";
-            this.toolStripButton저장.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton저장.Text = "저장";
-            this.toolStripButton저장.Click += new System.EventHandler(this.toolStripButton저장_Click);
-            // 
-            // toolStripButton정보
-            // 
-            this.toolStripButton정보.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton정보.Image = global::MapleMacro2.Properties.Resources.Info_24_24;
-            this.toolStripButton정보.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton정보.Name = "toolStripButton정보";
-            this.toolStripButton정보.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton정보.Text = "toolStripButton4";
-            this.toolStripButton정보.ToolTipText = "도움말";
-            this.toolStripButton정보.Click += new System.EventHandler(this.toolStripButton정보_Click);
-            // 
-            // toolStripButton열기
-            // 
-            this.toolStripButton열기.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton열기.Image = global::MapleMacro2.Properties.Resources.folder_16_16;
-            this.toolStripButton열기.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton열기.Name = "toolStripButton열기";
-            this.toolStripButton열기.Size = new System.Drawing.Size(32, 22);
-            this.toolStripButton열기.Text = "toolStripButton2";
-            this.toolStripButton열기.ToolTipText = "열기";
-            this.toolStripButton열기.ButtonClick += new System.EventHandler(this.toolStripButton열기_ButtonClick);
-            // 
-            // keysTextBox종료_키
-            // 
-            this.keysTextBox종료_키.Location = new System.Drawing.Point(90, 51);
-            this.keysTextBox종료_키.Name = "keysTextBox종료_키";
-            this.keysTextBox종료_키.ReadOnly = true;
-            this.keysTextBox종료_키.SelectedKeys = System.Windows.Forms.Keys.None;
-            this.keysTextBox종료_키.ShortcutsEnabled = false;
-            this.keysTextBox종료_키.Size = new System.Drawing.Size(100, 21);
-            this.keysTextBox종료_키.TabIndex = 13;
-            this.keysTextBox종료_키.Text = "None";
-            this.keysTextBox종료_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.keysTextBox종료_키.KeysChanged += new System.EventHandler(this.keysTextBox종료_키_KeysChanged);
-            this.keysTextBox종료_키.Enter += new System.EventHandler(this.keysTextBox종료_키_Enter);
-            this.keysTextBox종료_키.Leave += new System.EventHandler(this.keysTextBox종료_키_Leave);
-            // 
-            // keysTextBox시작_키
-            // 
-            this.keysTextBox시작_키.Location = new System.Drawing.Point(90, 24);
-            this.keysTextBox시작_키.Name = "keysTextBox시작_키";
-            this.keysTextBox시작_키.ReadOnly = true;
-            this.keysTextBox시작_키.SelectedKeys = System.Windows.Forms.Keys.None;
-            this.keysTextBox시작_키.ShortcutsEnabled = false;
-            this.keysTextBox시작_키.Size = new System.Drawing.Size(100, 21);
-            this.keysTextBox시작_키.TabIndex = 13;
-            this.keysTextBox시작_키.Text = "None";
-            this.keysTextBox시작_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.keysTextBox시작_키.KeysChanged += new System.EventHandler(this.keysTextBox시작_키_KeysChanged);
-            this.keysTextBox시작_키.Enter += new System.EventHandler(this.keysTextBox시작_키_Enter);
-            this.keysTextBox시작_키.Leave += new System.EventHandler(this.keysTextBox시작_키_Leave);
-            // 
-            // delayTextBox설정_매크로_활성_시간
-            // 
-            this.delayTextBox설정_매크로_활성_시간.Location = new System.Drawing.Point(123, 29);
-            this.delayTextBox설정_매크로_활성_시간.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.delayTextBox설정_매크로_활성_시간.Name = "delayTextBox설정_매크로_활성_시간";
-            this.delayTextBox설정_매크로_활성_시간.Size = new System.Drawing.Size(73, 21);
-            this.delayTextBox설정_매크로_활성_시간.TabIndex = 8;
-            this.delayTextBox설정_매크로_활성_시간.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.delayTextBox설정_매크로_활성_시간.ValueForInt = 0;
-            // 
             // delayTextBox기술_6_실행간격
             // 
             this.delayTextBox기술_6_실행간격.Location = new System.Drawing.Point(158, 203);
@@ -738,6 +323,33 @@
             this.keysTextBox기술_6_키.Enter += new System.EventHandler(this.keysTextBox기술_6_키_Enter);
             this.keysTextBox기술_6_키.Leave += new System.EventHandler(this.keysTextBox기술_6_키_Leave);
             // 
+            // checkBox기술_6_매크로유무
+            // 
+            this.checkBox기술_6_매크로유무.AutoSize = true;
+            this.checkBox기술_6_매크로유무.Location = new System.Drawing.Point(316, 206);
+            this.checkBox기술_6_매크로유무.Name = "checkBox기술_6_매크로유무";
+            this.checkBox기술_6_매크로유무.Size = new System.Drawing.Size(15, 14);
+            this.checkBox기술_6_매크로유무.TabIndex = 21;
+            this.checkBox기술_6_매크로유무.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(243, 206);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(37, 12);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "msec";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(23, 208);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(11, 12);
+            this.label20.TabIndex = 20;
+            this.label20.Text = "6";
+            // 
             // delayTextBox기술_5_실행간격
             // 
             this.delayTextBox기술_5_실행간격.Location = new System.Drawing.Point(158, 174);
@@ -766,6 +378,33 @@
             this.keysTextBox기술_5_키.KeysChanged += new System.EventHandler(this.keysTextBox기술_5_키_KeysChanged);
             this.keysTextBox기술_5_키.Enter += new System.EventHandler(this.keysTextBox기술_5_키_Enter);
             this.keysTextBox기술_5_키.Leave += new System.EventHandler(this.keysTextBox기술_5_키_Leave);
+            // 
+            // checkBox기술_5_매크로유무
+            // 
+            this.checkBox기술_5_매크로유무.AutoSize = true;
+            this.checkBox기술_5_매크로유무.Location = new System.Drawing.Point(316, 177);
+            this.checkBox기술_5_매크로유무.Name = "checkBox기술_5_매크로유무";
+            this.checkBox기술_5_매크로유무.Size = new System.Drawing.Size(15, 14);
+            this.checkBox기술_5_매크로유무.TabIndex = 16;
+            this.checkBox기술_5_매크로유무.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(243, 177);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(37, 12);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "msec";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(23, 179);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(11, 12);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "5";
             // 
             // delayTextBox기술_4_실행간격
             // 
@@ -883,6 +522,383 @@
             this.keysTextBox기술_1_키.Enter += new System.EventHandler(this.keysTextBox기술_1_키_Enter);
             this.keysTextBox기술_1_키.Leave += new System.EventHandler(this.keysTextBox기술_1_키_Leave);
             // 
+            // checkBox기술_4_매크로유무
+            // 
+            this.checkBox기술_4_매크로유무.AutoSize = true;
+            this.checkBox기술_4_매크로유무.Location = new System.Drawing.Point(316, 146);
+            this.checkBox기술_4_매크로유무.Name = "checkBox기술_4_매크로유무";
+            this.checkBox기술_4_매크로유무.Size = new System.Drawing.Size(15, 14);
+            this.checkBox기술_4_매크로유무.TabIndex = 11;
+            this.checkBox기술_4_매크로유무.UseVisualStyleBackColor = true;
+            // 
+            // checkBox기술_3_매크로유무
+            // 
+            this.checkBox기술_3_매크로유무.AutoSize = true;
+            this.checkBox기술_3_매크로유무.Location = new System.Drawing.Point(316, 117);
+            this.checkBox기술_3_매크로유무.Name = "checkBox기술_3_매크로유무";
+            this.checkBox기술_3_매크로유무.Size = new System.Drawing.Size(15, 14);
+            this.checkBox기술_3_매크로유무.TabIndex = 11;
+            this.checkBox기술_3_매크로유무.UseVisualStyleBackColor = true;
+            // 
+            // checkBox기술_2_매크로유무
+            // 
+            this.checkBox기술_2_매크로유무.AutoSize = true;
+            this.checkBox기술_2_매크로유무.Location = new System.Drawing.Point(316, 90);
+            this.checkBox기술_2_매크로유무.Name = "checkBox기술_2_매크로유무";
+            this.checkBox기술_2_매크로유무.Size = new System.Drawing.Size(15, 14);
+            this.checkBox기술_2_매크로유무.TabIndex = 11;
+            this.checkBox기술_2_매크로유무.UseVisualStyleBackColor = true;
+            // 
+            // checkBox기술_1_매크로유무
+            // 
+            this.checkBox기술_1_매크로유무.AutoSize = true;
+            this.checkBox기술_1_매크로유무.Location = new System.Drawing.Point(316, 62);
+            this.checkBox기술_1_매크로유무.Name = "checkBox기술_1_매크로유무";
+            this.checkBox기술_1_매크로유무.Size = new System.Drawing.Size(15, 14);
+            this.checkBox기술_1_매크로유무.TabIndex = 11;
+            this.checkBox기술_1_매크로유무.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.delayTextBox설정_매크로_활성_시간);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Location = new System.Drawing.Point(227, 103);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(366, 89);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "설정";
+            // 
+            // delayTextBox설정_매크로_활성_시간
+            // 
+            this.delayTextBox설정_매크로_활성_시간.Location = new System.Drawing.Point(123, 29);
+            this.delayTextBox설정_매크로_활성_시간.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.delayTextBox설정_매크로_활성_시간.Name = "delayTextBox설정_매크로_활성_시간";
+            this.delayTextBox설정_매크로_활성_시간.Size = new System.Drawing.Size(73, 21);
+            this.delayTextBox설정_매크로_활성_시간.TabIndex = 8;
+            this.delayTextBox설정_매크로_활성_시간.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.delayTextBox설정_매크로_활성_시간.ValueForInt = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(202, 34);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 12);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "msec";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(17, 35);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(97, 12);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "매크로 활성 시간";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel,
+            this.toolStripProgressBar시작유무,
+            this.toolStripStatusLabel시작유무});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 461);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(610, 22);
+            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.TabIndex = 14;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.AutoSize = false;
+            this.toolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.toolStripStatusLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(493, 17);
+            this.toolStripStatusLabel.Spring = true;
+            this.toolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripProgressBar시작유무
+            // 
+            this.toolStripProgressBar시작유무.Name = "toolStripProgressBar시작유무";
+            this.toolStripProgressBar시작유무.Size = new System.Drawing.Size(50, 16);
+            // 
+            // toolStripStatusLabel시작유무
+            // 
+            this.toolStripStatusLabel시작유무.AutoSize = false;
+            this.toolStripStatusLabel시작유무.Name = "toolStripStatusLabel시작유무";
+            this.toolStripStatusLabel시작유무.Size = new System.Drawing.Size(50, 17);
+            this.toolStripStatusLabel시작유무.Text = "정지";
+            this.toolStripStatusLabel시작유무.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.keysTextBox종료_키);
+            this.groupBox3.Controls.Add(this.keysTextBox시작_키);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Location = new System.Drawing.Point(13, 103);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(208, 89);
+            this.groupBox3.TabIndex = 15;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "시작/종료 키";
+            // 
+            // keysTextBox종료_키
+            // 
+            this.keysTextBox종료_키.Location = new System.Drawing.Point(90, 51);
+            this.keysTextBox종료_키.Name = "keysTextBox종료_키";
+            this.keysTextBox종료_키.ReadOnly = true;
+            this.keysTextBox종료_키.SelectedKeys = System.Windows.Forms.Keys.None;
+            this.keysTextBox종료_키.ShortcutsEnabled = false;
+            this.keysTextBox종료_키.Size = new System.Drawing.Size(100, 21);
+            this.keysTextBox종료_키.TabIndex = 13;
+            this.keysTextBox종료_키.Text = "None";
+            this.keysTextBox종료_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.keysTextBox종료_키.KeysChanged += new System.EventHandler(this.keysTextBox종료_키_KeysChanged);
+            this.keysTextBox종료_키.Enter += new System.EventHandler(this.keysTextBox종료_키_Enter);
+            this.keysTextBox종료_키.Leave += new System.EventHandler(this.keysTextBox종료_키_Leave);
+            // 
+            // keysTextBox시작_키
+            // 
+            this.keysTextBox시작_키.Location = new System.Drawing.Point(90, 24);
+            this.keysTextBox시작_키.Name = "keysTextBox시작_키";
+            this.keysTextBox시작_키.ReadOnly = true;
+            this.keysTextBox시작_키.SelectedKeys = System.Windows.Forms.Keys.None;
+            this.keysTextBox시작_키.ShortcutsEnabled = false;
+            this.keysTextBox시작_키.Size = new System.Drawing.Size(100, 21);
+            this.keysTextBox시작_키.TabIndex = 13;
+            this.keysTextBox시작_키.Text = "None";
+            this.keysTextBox시작_키.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.keysTextBox시작_키.KeysChanged += new System.EventHandler(this.keysTextBox시작_키_KeysChanged);
+            this.keysTextBox시작_키.Enter += new System.EventHandler(this.keysTextBox시작_키_Enter);
+            this.keysTextBox시작_키.Leave += new System.EventHandler(this.keysTextBox시작_키_Leave);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(21, 57);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(45, 12);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "종료 키";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(21, 29);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(45, 12);
+            this.label15.TabIndex = 12;
+            this.label15.Text = "시작 키";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.파일ToolStripMenuItem,
+            this.도움말ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(610, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 파일ToolStripMenuItem
+            // 
+            this.파일ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.새파일ToolStripMenuItem,
+            this.열기ToolStripMenuItem,
+            this.저장ToolStripMenuItem,
+            this.다른이름으로저장ToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.최근에사용한설정파일ToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.종료ToolStripMenuItem});
+            this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
+            this.파일ToolStripMenuItem.ShortcutKeyDisplayString = "";
+            this.파일ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
+            this.파일ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.파일ToolStripMenuItem.Text = "파일";
+            // 
+            // 새파일ToolStripMenuItem
+            // 
+            this.새파일ToolStripMenuItem.Name = "새파일ToolStripMenuItem";
+            this.새파일ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.새파일ToolStripMenuItem.Text = "새 파일";
+            this.새파일ToolStripMenuItem.Click += new System.EventHandler(this.새파일ToolStripMenuItem_Click);
+            // 
+            // 열기ToolStripMenuItem
+            // 
+            this.열기ToolStripMenuItem.Name = "열기ToolStripMenuItem";
+            this.열기ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.열기ToolStripMenuItem.Text = "열기";
+            this.열기ToolStripMenuItem.Click += new System.EventHandler(this.열기ToolStripMenuItem_Click);
+            // 
+            // 저장ToolStripMenuItem
+            // 
+            this.저장ToolStripMenuItem.Name = "저장ToolStripMenuItem";
+            this.저장ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.저장ToolStripMenuItem.Text = "저장";
+            this.저장ToolStripMenuItem.Click += new System.EventHandler(this.저장ToolStripMenuItem_Click);
+            // 
+            // 다른이름으로저장ToolStripMenuItem
+            // 
+            this.다른이름으로저장ToolStripMenuItem.Name = "다른이름으로저장ToolStripMenuItem";
+            this.다른이름으로저장ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.다른이름으로저장ToolStripMenuItem.Text = "다른 이름으로 저장";
+            this.다른이름으로저장ToolStripMenuItem.Click += new System.EventHandler(this.다른이름으로저장ToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(203, 6);
+            // 
+            // 최근에사용한설정파일ToolStripMenuItem
+            // 
+            this.최근에사용한설정파일ToolStripMenuItem.Name = "최근에사용한설정파일ToolStripMenuItem";
+            this.최근에사용한설정파일ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.최근에사용한설정파일ToolStripMenuItem.Text = "최근에 사용한 설정 파일";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(203, 6);
+            // 
+            // 종료ToolStripMenuItem
+            // 
+            this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
+            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.종료ToolStripMenuItem.Text = "종료";
+            this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
+            // 
+            // 도움말ToolStripMenuItem
+            // 
+            this.도움말ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.도움말ToolStripMenuItem1,
+            this.toolStripSeparator3,
+            this.홈페이지ToolStripMenuItem,
+            this.업데이트확인ToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.정보ToolStripMenuItem,
+            this.toolStripSeparator5,
+            this.옵션ToolStripMenuItem});
+            this.도움말ToolStripMenuItem.Name = "도움말ToolStripMenuItem";
+            this.도움말ToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.도움말ToolStripMenuItem.Text = "도움말";
+            // 
+            // 도움말ToolStripMenuItem1
+            // 
+            this.도움말ToolStripMenuItem1.Name = "도움말ToolStripMenuItem1";
+            this.도움말ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.도움말ToolStripMenuItem1.Text = "도움말";
+            this.도움말ToolStripMenuItem1.Click += new System.EventHandler(this.도움말ToolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            // 
+            // 홈페이지ToolStripMenuItem
+            // 
+            this.홈페이지ToolStripMenuItem.Name = "홈페이지ToolStripMenuItem";
+            this.홈페이지ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.홈페이지ToolStripMenuItem.Text = "홈페이지";
+            this.홈페이지ToolStripMenuItem.Click += new System.EventHandler(this.홈페이지ToolStripMenuItem_Click);
+            // 
+            // 업데이트확인ToolStripMenuItem
+            // 
+            this.업데이트확인ToolStripMenuItem.Name = "업데이트확인ToolStripMenuItem";
+            this.업데이트확인ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.업데이트확인ToolStripMenuItem.Text = "업데이트 확인";
+            this.업데이트확인ToolStripMenuItem.Click += new System.EventHandler(this.업데이트확인ToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // 정보ToolStripMenuItem
+            // 
+            this.정보ToolStripMenuItem.Name = "정보ToolStripMenuItem";
+            this.정보ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.정보ToolStripMenuItem.Text = "정보";
+            this.정보ToolStripMenuItem.Click += new System.EventHandler(this.정보ToolStripMenuItem_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton새파일,
+            this.toolStripButton열기,
+            this.toolStripButton저장,
+            this.toolStripButton정보});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(610, 25);
+            this.toolStrip1.TabIndex = 17;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton새파일
+            // 
+            this.toolStripButton새파일.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton새파일.Image = global::MapleMacro2.Properties.Resources.document_24_24;
+            this.toolStripButton새파일.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton새파일.Name = "toolStripButton새파일";
+            this.toolStripButton새파일.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton새파일.Text = "toolStripButton1";
+            this.toolStripButton새파일.ToolTipText = "새 파일";
+            this.toolStripButton새파일.Click += new System.EventHandler(this.toolStripButton새파일_Click);
+            // 
+            // toolStripButton열기
+            // 
+            this.toolStripButton열기.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton열기.Image = global::MapleMacro2.Properties.Resources.folder_16_16;
+            this.toolStripButton열기.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton열기.Name = "toolStripButton열기";
+            this.toolStripButton열기.Size = new System.Drawing.Size(32, 22);
+            this.toolStripButton열기.Text = "toolStripButton2";
+            this.toolStripButton열기.ToolTipText = "열기";
+            this.toolStripButton열기.ButtonClick += new System.EventHandler(this.toolStripButton열기_ButtonClick);
+            // 
+            // toolStripButton저장
+            // 
+            this.toolStripButton저장.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton저장.Image = global::MapleMacro2.Properties.Resources.floppy_disk_24_24;
+            this.toolStripButton저장.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton저장.Name = "toolStripButton저장";
+            this.toolStripButton저장.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton저장.Text = "저장";
+            this.toolStripButton저장.Click += new System.EventHandler(this.toolStripButton저장_Click);
+            // 
+            // toolStripButton정보
+            // 
+            this.toolStripButton정보.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton정보.Image = global::MapleMacro2.Properties.Resources.Info_24_24;
+            this.toolStripButton정보.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton정보.Name = "toolStripButton정보";
+            this.toolStripButton정보.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton정보.Text = "toolStripButton4";
+            this.toolStripButton정보.ToolTipText = "도움말";
+            this.toolStripButton정보.Click += new System.EventHandler(this.toolStripButton정보_Click);
+            // 
+            // 옵션ToolStripMenuItem
+            // 
+            this.옵션ToolStripMenuItem.Name = "옵션ToolStripMenuItem";
+            this.옵션ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.옵션ToolStripMenuItem.Text = "옵션";
+            this.옵션ToolStripMenuItem.Click += new System.EventHandler(this.옵션ToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -904,8 +920,15 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_6_실행간격)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_5_실행간격)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_4_실행간격)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_3_실행간격)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_2_실행간격)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_1_실행간격)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox설정_매크로_활성_시간)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -914,13 +937,6 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox설정_매크로_활성_시간)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_6_실행간격)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_5_실행간격)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_4_실행간격)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_3_실행간격)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_2_실행간격)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_1_실행간격)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1001,6 +1017,8 @@
         private System.Windows.Forms.ToolStripMenuItem 최근에사용한설정파일ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripSplitButton toolStripButton열기;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem 옵션ToolStripMenuItem;
     }
 }
 

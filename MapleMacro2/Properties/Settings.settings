@@ -8,5 +8,8 @@
     <Setting Name="RECENTLY_OPENED_FILES" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="SELECTED_GAME_TITLE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MapleStory</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

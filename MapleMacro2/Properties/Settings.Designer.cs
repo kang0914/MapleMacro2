@@ -45,5 +45,17 @@ namespace MapleMacro2.Properties {
                 this["RECENTLY_OPENED_FILES"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("MapleStory")]
+        public string SELECTED_GAME_TITLE {
+            get {
+                return ((string)(this["SELECTED_GAME_TITLE"]));
+            }
+            set {
+                this["SELECTED_GAME_TITLE"] = value;
+            }
+        }
     }
 }
