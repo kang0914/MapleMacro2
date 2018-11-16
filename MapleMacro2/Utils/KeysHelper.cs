@@ -66,6 +66,26 @@ namespace MapleMacro2.Utils
 
             return modifiers;
         }
+
+        public static Keys CovertToHotKeyModifiersForHelpers(HotKeyHelper.KeyModifiers keys)
+        {
+            Keys modifiers = Keys.None;
+
+            if (keys.HasFlag(HotKeyHelper.KeyModifiers.Control))
+                modifiers = modifiers | Keys.Control;
+
+            if (keys.HasFlag(HotKeyHelper.KeyModifiers.Alt))
+                modifiers = modifiers | Keys.Alt;
+
+            if (keys.HasFlag(HotKeyHelper.KeyModifiers.Shift))
+                modifiers = modifiers | Keys.Shift;
+
+            if (keys.HasFlag(HotKeyHelper.KeyModifiers.Windows))
+                modifiers = modifiers | Keys.LWin;
+
+            return modifiers;
+        }
+
         public static Keys ClearModifiers(Keys keys)
         {
             Keys modifiers = keys;

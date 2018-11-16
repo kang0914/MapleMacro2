@@ -16,7 +16,7 @@ namespace MapleMacro2.UserControls
 
         public DelayTextBox()
         {
-            Controls[0].Visible = false;
+            //Controls[0].Visible = false;
         }
     }
 }

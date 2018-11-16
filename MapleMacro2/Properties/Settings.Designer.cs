@@ -34,5 +34,16 @@ namespace MapleMacro2.Properties {
                 this["LAST_OPENED_FILE"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection RECENTLY_OPENED_FILES {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["RECENTLY_OPENED_FILES"]));
+            }
+            set {
+                this["RECENTLY_OPENED_FILES"] = value;
+            }
+        }
     }
 }

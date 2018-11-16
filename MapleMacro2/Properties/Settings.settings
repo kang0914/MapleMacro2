@@ -5,5 +5,8 @@
     <Setting Name="LAST_OPENED_FILE" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="RECENTLY_OPENED_FILES" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

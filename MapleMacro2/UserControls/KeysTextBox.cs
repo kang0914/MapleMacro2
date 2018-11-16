@@ -34,7 +34,7 @@ namespace MapleMacro2.UserControls
 
         protected override void OnKeyDown(KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape)
             {
                 SelectedKeys = Keys.None;
                 e.Handled = true;
@@ -50,20 +50,36 @@ namespace MapleMacro2.UserControls
         
         protected override void OnMouseDown(MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left)
+            if (Focused)
             {
-                SelectedKeys = Keys.LButton;                
-            }
-            else if(e.Button == MouseButtons.Right)
-            {
-                SelectedKeys = Keys.RButton;
-            }
-            else if (e.Button == MouseButtons.Middle)
-            {
-                SelectedKeys = Keys.MButton;
+                if (e.Button == MouseButtons.Left)
+                {
+                    if (IsFirstClick)
+                    { 
+                        IsFirstClick = false;
+                    }
+                    else
+                        SelectedKeys = Keys.LButton;
+                }
+                else if (e.Button == MouseButtons.Right)
+                {
+                    SelectedKeys = Keys.RButton;
+                }
+                else if (e.Button == MouseButtons.Middle)
+                {
+                    SelectedKeys = Keys.MButton;
+                }
             }
 
             base.OnMouseDown(e);
+        }
+
+        private bool IsFirstClick;
+        protected override void OnGotFocus(EventArgs e)
+        {
+            IsFirstClick = true;
+
+            base.OnGotFocus(e);
         }
 
         private void UpdateDisplayText()
