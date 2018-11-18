@@ -313,7 +313,7 @@ namespace MapleMacro2
                 return;
 
             // 최초 1회 실행
-            SendMessageHelper.KeyboardDown(Properties.Settings.Default.SELECTED_GAME_TITLE, singleKeysInfo.KEYS);
+            SendMessageHelper.KeyboardPress(Properties.Settings.Default.SELECTED_GAME_TITLE, singleKeysInfo.KEYS);
 
             // 타이머 설정
             Timer tmr = new Timer();
@@ -329,7 +329,7 @@ namespace MapleMacro2
                 if (tempSingleKeysInfo.IS_MACROD_FUNC)
                     Start매크로활성();
 
-                SendMessageHelper.KeyboardDown(Properties.Settings.Default.SELECTED_GAME_TITLE, tempSingleKeysInfo.KEYS);
+                SendMessageHelper.KeyboardPress(Properties.Settings.Default.SELECTED_GAME_TITLE, tempSingleKeysInfo.KEYS);
             };
 
             tmr.Tag = singleKeysInfo;

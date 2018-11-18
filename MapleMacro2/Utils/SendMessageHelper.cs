@@ -42,24 +42,13 @@ namespace MapleMacro2.Utils
             return WindowName;
         }
 
-        public static void KeyboardDown(string windowName, Keys keyCode)
+        public static void KeyboardPress(string windowName, Keys keyCode)
         {
-            KeyboardDown(FindWindow(windowName), keyCode);
+            KeyboardPress(FindWindow(windowName), keyCode);
         }
 
-        public static void KeyboardDown(IntPtr hWnd, Keys keyCode)
+        public static void KeyboardPress(IntPtr hWnd, Keys keyCode)
         {
-            //PostMessage(WindowName, 0x100, (IntPtr)Keys.A, IntPtr.Zero);
-            //System.Threading.Thread.Sleep(33);
-            //PostMessage(WindowName, 0x101, (IntPtr)Keys.A, IntPtr.Zero);
-
-            //PostMessage(hWnd, 0x100, (IntPtr)keyCode, (IntPtr)0x1e0001);
-
-            //PostMessage(hWnd, 0x100, (IntPtr)0x41, (IntPtr)0x1e0001);
-
-            //long lParam = CreateLParam((byte)Keys.IMEAccept, true);
-            //long lParam = CreateLParam((byte)keyCode, true);
-
             if (keyCode == Keys.LButton)
             {
                 mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
@@ -77,9 +66,93 @@ namespace MapleMacro2.Utils
             }
             else
             { 
+                // KeyDown
                 PostMessage(hWnd, 0x100, (IntPtr)keyCode, (IntPtr)Data.KeyboardLParamMaps.GetLParam(keyCode));
-                System.Threading.Thread.Sleep(33);
+
+                //키보드 Up/Down 간격은 60~100ms 사이
+                var randDealy = new Random().Next(60, 100);
+                System.Threading.Thread.Sleep(randDealy);
+
+                // KeyUp
                 PostMessage(hWnd, 0x101, (IntPtr)keyCode, (IntPtr)Data.KeyboardLParamMaps.GetLParam(keyCode));
+            }
+        }
+
+        public static void KeyboardDown(string windowName, Keys keyCode)
+        {
+            KeyboardDown(FindWindow(windowName), keyCode);
+        }
+
+        public static void KeyboardDown(IntPtr hWnd, Keys keyCode)
+        {
+            if (keyCode == Keys.LButton)
+            {
+                mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+            }
+            else if (keyCode == Keys.RButton)
+            {
+                mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0);
+            }
+            else if (keyCode == Keys.MButton)
+            {
+                mouse_event(MOUSEEVENTF_MIDDLEDOWN, 0, 0, 0, 0);
+            }
+            else
+            {
+                // KeyDown
+                PostMessage(hWnd, 0x100, (IntPtr)keyCode, (IntPtr)Data.KeyboardLParamMaps.GetLParam(keyCode));
+            }
+        }
+
+        public static void KeyboardUp(string windowName, Keys keyCode)
+        {
+            KeyboardUp(FindWindow(windowName), keyCode);
+        }
+
+        public static void KeyboardUp(IntPtr hWnd, Keys keyCode)
+        {
+            if (keyCode == Keys.LButton)
+            {
+                mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+            }
+            else if (keyCode == Keys.RButton)
+            {
+                mouse_event(MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0);
+            }
+            else if (keyCode == Keys.MButton)
+            {
+                mouse_event(MOUSEEVENTF_MIDDLEUP, 0, 0, 0, 0);
+            }
+            else
+            {
+                // KeyUp
+                PostMessage(hWnd, 0x101, (IntPtr)keyCode, (IntPtr)Data.KeyboardLParamMaps.GetLParam(keyCode));
+            }
+        }
+
+        public static void KeyboardDownEx(string windowName, Keys keyCode, IntPtr lParam)
+        {
+            KeyboardDownEx(FindWindow(windowName), keyCode, lParam);
+        }
+
+        public static void KeyboardDownEx(IntPtr hWnd, Keys keyCode, IntPtr lParam)
+        {
+            if (keyCode == Keys.LButton)
+            {
+                mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+            }
+            else if (keyCode == Keys.RButton)
+            {
+                mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0);
+            }
+            else if (keyCode == Keys.MButton)
+            {
+                mouse_event(MOUSEEVENTF_MIDDLEDOWN, 0, 0, 0, 0);
+            }
+            else
+            {
+                // KeyDown
+                PostMessage(hWnd, 0x100, (IntPtr)keyCode, lParam);
             }
         }
     }

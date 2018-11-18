@@ -57,5 +57,18 @@ namespace MapleMacro2.Properties {
                 this["SELECTED_GAME_TITLE"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Send {Alt down}\r\nSleep 100\r\nSend {Alt up}\r\nSleep 100\r\nSend {Alt down}\r\nSleep 100\r" +
+            "\nSend {Alt up}\r\nSleep 350\r\nSend {Ctrl}")]
+        public string SCRIPT_공격패턴_1 {
+            get {
+                return ((string)(this["SCRIPT_공격패턴_1"]));
+            }
+            set {
+                this["SCRIPT_공격패턴_1"] = value;
+            }
+        }
     }
 }

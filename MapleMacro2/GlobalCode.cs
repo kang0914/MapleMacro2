@@ -11,5 +11,9 @@ namespace MapleMacro2
 
         public const string PROGRAM_TITLE_MAPLESTORY = "MapleStory";
         public const string PROGRAM_TITLE_DIABLO3 = "디아블로 III";
+
+        //public const string PROGRAM_IMAGES_TEST = @"C:\Users\Jaewon\Pictures\";
+        public const string PROGRAM_IMAGES_TEST = @"Images\1366_768\";
+        public const string PROGRAM_IMAGES_1366_768 = @"Images\1366_768\";
     }
 }

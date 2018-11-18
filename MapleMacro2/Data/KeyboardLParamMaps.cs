@@ -52,7 +52,7 @@ namespace MapleMacro2.Data
             dic[Keys.Left] = 0x14B0001;
             dic[Keys.Up] = 0x1480001;
             dic[Keys.Right] = 0x14D0001;
-            dic[Keys.Down] = 0x1400001;
+            dic[Keys.Down] = 0x1500001;
             //dic[Keys.Select]
             //dic[Keys.Print] = 
             //dic[Keys.Execute]
@@ -202,7 +202,7 @@ namespace MapleMacro2.Data
             //dic[Keys.KeyCode]
             //dic[Keys.Shift]
             //dic[Keys.Control]
-            //dic[Keys.Alt]
+            dic[Keys.Alt] = 0x20380001;
         }
 
         public static long GetLParam(Keys keys)

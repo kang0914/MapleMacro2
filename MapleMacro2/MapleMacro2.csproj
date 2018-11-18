@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>MapleMacro2</RootNamespace>
     <AssemblyName>MapleMacro2</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <PublishUrl>publish\</PublishUrl>
@@ -26,6 +26,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,6 +47,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -82,6 +85,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="UI\F8000_메이플테스트.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\F8000_메이플테스트.Designer.cs">
+      <DependentUpon>F8000_메이플테스트.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\F9000_옵션.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,11 +103,10 @@
     <Compile Include="UserControls\DelayTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Utils\GlobalKeyboardHook.cs" />
+    <Compile Include="Utils\AutoHotkeyHelper.cs" />
     <Compile Include="Utils\HotKeyHelper.cs" />
     <Compile Include="Utils\KeysHelper.cs" />
     <Compile Include="Utils\ScreenCopy.cs" />
-    <Compile Include="Utils\SendInputHelper.cs" />
     <Compile Include="Utils\SendMessageHelper.cs" />
     <Compile Include="Utils\XMLHelper.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -114,6 +122,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\F8000_메이플테스트.resx">
+      <DependentUpon>F8000_메이플테스트.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\F9000_옵션.resx">
       <DependentUpon>F9000_옵션.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +158,110 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\folder_16_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoHotkey.Interop\AutoHotkey.Interop.csproj">
+      <Project>{2869dbfe-7762-4930-95ea-2b0c111cf353}</Project>
+      <Name>AutoHotkey.Interop</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\1366_768\minimap_diff_user_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_diff_user_transblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_hiddenstreet_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_hiddenstreet_transblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_leftbottom_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_leftbottom_transblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_lefttop_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_lefttop_transblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_left_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_left_transblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_maximizebox_disabled_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_maximizebox_disabled_transblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_maximizebox_enabled_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_maximizebox_enabled_tranblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_minimizebox_disabled_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_minimizebox_disabled_tranblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_minimizebox_enabled_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_minimizebox_enabled_tranblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_rightbottom_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_rightbottom_transblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_righttop_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_righttop_transblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_right_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_right_transblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_rune_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_rune_transblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_transblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_user_original.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_user_transblack.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_user_transblack2.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1366_768\minimap_user_transblack3.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
