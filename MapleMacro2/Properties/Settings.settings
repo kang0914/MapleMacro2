@@ -22,5 +22,19 @@ Send {Alt up}
 Sleep 350
 Send {Ctrl}</Value>
     </Setting>
+    <Setting Name="SCRIPT_공격패턴_2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Send {Alt down}
+Sleep 100
+Send {Alt up}
+Sleep 100
+Send {Alt down}
+Sleep 100
+Send {Alt up}
+Sleep 350
+Send {Ctrl}</Value>
+    </Setting>
+    <Setting Name="MACRO_TIMER_INTERVAL" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2000</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

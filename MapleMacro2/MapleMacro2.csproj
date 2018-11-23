@@ -72,6 +72,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\HPMPWatcher.cs" />
+    <Compile Include="Core\MiniMapWatcher.cs" />
     <Compile Include="Data\KeyboardLParamMaps.cs" />
     <Compile Include="Data\MapleMacro2Config.cs" />
     <Compile Include="Data\SingleKeysInfo.cs" />
@@ -166,6 +168,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\1366_768\hpmp_left_original.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\1366_768\minimap_diff_user_original.BMP">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
