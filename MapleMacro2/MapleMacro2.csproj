@@ -72,9 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\AutomaticHuntingManager.cs" />
     <Compile Include="Core\HPMPWatcher.cs" />
     <Compile Include="Core\MiniMapWatcher.cs" />
+    <Compile Include="Data\AutoHoykeyKeyboardMaps.cs" />
     <Compile Include="Data\KeyboardLParamMaps.cs" />
+    <Compile Include="Data\MapleMacro2Config2.cs" />
     <Compile Include="Data\MapleMacro2Config.cs" />
     <Compile Include="Data\SingleKeysInfo.cs" />
     <Compile Include="Form1.cs">
@@ -98,6 +101,12 @@
     </Compile>
     <Compile Include="UI\F9000_옵션.Designer.cs">
       <DependentUpon>F9000_옵션.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\F1000_메이플_메인.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\F1000_메이플_메인.Designer.cs">
+      <DependentUpon>F1000_메이플_메인.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\KeysTextBox.cs">
       <SubType>Component</SubType>
@@ -129,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\F9000_옵션.resx">
       <DependentUpon>F9000_옵션.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\F1000_메이플_메인.resx">
+      <DependentUpon>F1000_메이플_메인.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\app.manifest" />
@@ -267,6 +279,9 @@
     <Content Include="Images\1366_768\minimap_user_transblack3.BMP">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\EventArgs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

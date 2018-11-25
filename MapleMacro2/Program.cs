@@ -16,7 +16,8 @@ namespace MapleMacro2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            Application.Run(new UI.F8000());
+            //Application.Run(new UI.F8000());
+            Application.Run(new UI.F1000());
         }
     }
 }

@@ -22,11 +22,19 @@ namespace MapleMacro2.Utils
         /// <param name="append">If false the file will be overwritten if it already exists. If true the contents will be appended to the file.</param>
         public static void WriteToXmlFile<T>(string filePath, T objectToWrite, bool append = false) where T : new()
         {
-            TextWriter writer = null;
+            XmlWriter writer = null;
             try
             {
+                XmlWriterSettings settings = new XmlWriterSettings();
+                settings.Indent = true;
+                settings.OmitXmlDeclaration = true;
+                settings.NewLineChars = Environment.NewLine;               
+                settings.NewLineOnAttributes = true;
+                settings.NewLineHandling = NewLineHandling.Replace;
+                settings.CloseOutput = true;
+
                 var serializer = new XmlSerializer(typeof(T));
-                writer = new StreamWriter(filePath, append);
+                writer = XmlWriter.Create(filePath, settings);
                 serializer.Serialize(writer, objectToWrite);
             }
             finally
@@ -45,11 +53,11 @@ namespace MapleMacro2.Utils
         /// <returns>Returns a new instance of the object read from the XML file.</returns>
         public static T ReadFromXmlFile<T>(string filePath) where T : new()
         {
-            TextReader reader = null;
+            XmlTextReader reader = null;
             try
             {
                 var serializer = new XmlSerializer(typeof(T));
-                reader = new StreamReader(filePath);
+                reader = new  XmlTextReader(new FileStream(filePath, FileMode.Open), XmlNodeType.Document, null);
                 return (T)serializer.Deserialize(reader);
             }
             finally

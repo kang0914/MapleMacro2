@@ -77,13 +77,14 @@
             // 
             // timerMousePoint
             // 
+            this.timerMousePoint.Enabled = true;
             this.timerMousePoint.Interval = 1000;
             this.timerMousePoint.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 35);
+            this.label1.Location = new System.Drawing.Point(42, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 12);
             this.label1.TabIndex = 1;
@@ -92,7 +93,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Location = new System.Drawing.Point(57, 29);
+            this.panel1.Location = new System.Drawing.Point(12, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(23, 23);
             this.panel1.TabIndex = 2;

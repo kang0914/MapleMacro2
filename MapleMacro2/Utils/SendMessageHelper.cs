@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -16,7 +17,10 @@ namespace MapleMacro2.Utils
         public static extern IntPtr PostMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
 
         [DllImport("user32.dll")]
-        static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, int dwExtraInfo);
+        public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, int dwExtraInfo);
+
+        [DllImport("user32.dll")]
+        public static extern bool GetWindowRect(IntPtr hwnd, ref RECT rectangle);
 
         const uint MOUSEEVENTF_ABSOLUTE = 0x8000;
         const uint MOUSEEVENTF_LEFTDOWN = 0x0002;
@@ -31,6 +35,15 @@ namespace MapleMacro2.Utils
         const uint MOUSEEVENTF_WHEEL = 0x0800;
         const uint MOUSEEVENTF_HWHEEL = 0x01000;
 
+        [StructLayout(LayoutKind.Sequential)]
+        public struct RECT
+        {
+            public int Left;        // x position of upper-left corner
+            public int Top;         // y position of upper-left corner
+            public int Right;       // x position of lower-right corner
+            public int Bottom;      // y position of lower-right corner
+        }
+
         public static IntPtr FindWindow(string windowName)
         {
             IntPtr WindowName = FindWindow(null, windowName);
@@ -40,6 +53,20 @@ namespace MapleMacro2.Utils
             }
 
             return WindowName;
+        }
+
+        public static Size? GetWindowRect(string windowName)
+        {
+            IntPtr WindowName = FindWindow(null, windowName);
+            if (WindowName == IntPtr.Zero)
+            {
+                return null;
+            }
+
+            RECT r = new RECT();
+            GetWindowRect(WindowName, ref r);
+
+            return new Size(r.Right - r.Left, r.Bottom - r.Top);
         }
 
         public static void KeyboardPress(string windowName, Keys keyCode)

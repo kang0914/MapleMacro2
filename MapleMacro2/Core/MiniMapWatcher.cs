@@ -11,6 +11,9 @@ namespace MapleMacro2.Core
 {
     public class MiniMapWatcher
     {
+        public Point POINT_MINIMAP_LEFT_TOP = new Point(0, 25);
+        public Point POINT_MINIMAP_RIGHT_BOTTOM = new Point(500, 500);
+
         public const int TIMER_INTERVAL = 1000;
 
         private Point? PrevPointMinimapTitle = null;
@@ -63,67 +66,57 @@ namespace MapleMacro2.Core
         {
             // minimap_title
             string img5 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_transblack.bmp";
-            var pointMinimapTitle = AutoHotkeyHelper.ImageSearch(0, 25, 550, 150, img5);
+            var pointMinimapTitle = AutoHotkeyHelper.ImageSearch(POINT_MINIMAP_LEFT_TOP.X, POINT_MINIMAP_LEFT_TOP.Y, 550, 150, img5);
 
             CourrentPointMinimapTitle = pointMinimapTitle;
 
             // minimap_right
             string img13 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_right_transblack.bmp";
-            var pointRight = AutoHotkeyHelper.ImageSearch(0, 25, 500, 300, img13);
+            var pointRight = AutoHotkeyHelper.ImageSearch(POINT_MINIMAP_LEFT_TOP.X, POINT_MINIMAP_LEFT_TOP.Y, 500, 300, img13);
 
             CourrentPointRight = pointRight;
 
             // minimap_left
             string img14 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_left_transblack.bmp";
-            var pointLeft = AutoHotkeyHelper.ImageSearch(0, 25, 300, 500, img14);
+            var pointLeft = AutoHotkeyHelper.ImageSearch(POINT_MINIMAP_LEFT_TOP.X, POINT_MINIMAP_LEFT_TOP.Y, 300, 500, img14);
 
             CourrentPointLeft = pointLeft;
 
-            //// minimap_minimizebox
-            //string img6 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_minimizebox_enabled_tranblack.bmp";
-            //var pointMinimizeBox = AutoHotkeyHelper.ImageSearch(0, 0, 300, 150, img6);
+            if (CourrentPointMinimapTitle.HasValue == false ||
+                CourrentPointRight.HasValue == false)
+            {
+                CourrentPointMinimapTitle = null;
+                CourrentPointRight = null;
+                CourrentPointLeft = null;
+                CourrentPointUser = null;
+                CourrentPointRune = null;
+                CourrentPointHiddenStreet = null;
+                CourrentPointDiffUser = null;
 
-            //// minimap_maxmizebox
-            //string img7 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_maximizebox_disabled_transblack.bmp";
-            //var pointMaximizeBox = AutoHotkeyHelper.ImageSearch(0, 0, 300, 150, img7);
-
-            //// minimap_left top
-            //string img8 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_lefttop_transblack.bmp";
-            //var pointLeftTop = AutoHotkeyHelper.ImageSearch(0, 0, 300, 300, img8);
-
-            //// minimap_left bottom(failed)
-            //string img9 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_leftbottom_transblack.bmp";
-            //var pointLeftBottom = AutoHotkeyHelper.ImageSearch(0, 0, 100, 500, img9);
-
-            //// minimap_right top
-            //string img10 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_righttop_transblack.bmp";
-            //var pointRightTop = AutoHotkeyHelper.ImageSearch(0, 0, 300, 300, img10);
-
-            //// minimap_right bottom
-            //string img11 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_rightbottom_transblack.bmp";
-            //var pointRightBottom = AutoHotkeyHelper.ImageSearch(0, 0, 300, 300, img11);
+                return;
+            }
 
             // minimap_user
             string img12 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_user_transblack3.bmp";
-            var pointUser = AutoHotkeyHelper.ImageSearch(0, 25, 500, 500, img12);
+            var pointUser = AutoHotkeyHelper.ImageSearch(POINT_MINIMAP_LEFT_TOP.X, POINT_MINIMAP_LEFT_TOP.Y, Math.Min(POINT_MINIMAP_RIGHT_BOTTOM.X, pointRight.Value.X), POINT_MINIMAP_RIGHT_BOTTOM.Y, img12);
 
             CourrentPointUser = pointUser;
 
             // minimap rune
             string img15 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_rune_transblack.bmp";
-            var pointRune = AutoHotkeyHelper.ImageSearch(0, 25, 300, 500, img15);
+            var pointRune = AutoHotkeyHelper.ImageSearch(POINT_MINIMAP_LEFT_TOP.X, POINT_MINIMAP_LEFT_TOP.Y, Math.Min(POINT_MINIMAP_RIGHT_BOTTOM.X, pointRight.Value.X), POINT_MINIMAP_RIGHT_BOTTOM.Y, img15);
 
             CourrentPointRune = pointRune;
 
             // minimap hidden street
             string img16 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_hiddenstreet_transblack.bmp";
-            var pointHiddenStreet = AutoHotkeyHelper.ImageSearch(0, 25, 300, 500, img16);
+            var pointHiddenStreet = AutoHotkeyHelper.ImageSearch(POINT_MINIMAP_LEFT_TOP.X, POINT_MINIMAP_LEFT_TOP.Y, Math.Min(POINT_MINIMAP_RIGHT_BOTTOM.X, pointRight.Value.X), POINT_MINIMAP_RIGHT_BOTTOM.Y, img16);
 
             CourrentPointHiddenStreet = pointHiddenStreet;
 
             // minimap diff user
             string img17 = $"{GlobalCode.PROGRAM_IMAGES_TEST}minimap_diff_user_transblack.bmp";
-            var pointDiffUser = AutoHotkeyHelper.ImageSearch(0, 0, 300, 500, img17);
+            var pointDiffUser = AutoHotkeyHelper.ImageSearch(POINT_MINIMAP_LEFT_TOP.X, POINT_MINIMAP_LEFT_TOP.Y, Math.Min(POINT_MINIMAP_RIGHT_BOTTOM.X, pointRight.Value.X), POINT_MINIMAP_RIGHT_BOTTOM.Y, img17);
 
             CourrentPointDiffUser = pointDiffUser;
 

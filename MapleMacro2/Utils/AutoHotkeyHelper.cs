@@ -1,4 +1,5 @@
 ﻿using AutoHotkey.Interop;
+using MapleMacro2.Data;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -9,9 +10,21 @@ using System.Windows.Forms;
 
 namespace MapleMacro2.Utils
 {
-    public class AutoHotkeyHelper
+    public static class AutoHotkeyHelper
     {
         public static object lockObject = new object();
+
+        static AutoHotkeyHelper()
+        {
+            var ahk = AutoHotkeyEngine.Instance;
+
+            //create a new function
+            string sayHelloFunction = @"RandSleep(x, y){
+	Random, rand, %x%, %y%
+	Sleep %rand%
+}";
+            ahk.ExecRaw(sayHelloFunction);
+        }
 
         public static Point? ImageSearch(int X1, int Y1, int X2, int Y2, string ImageFile)
         {
@@ -91,6 +104,27 @@ PixelGetColor, color, %MouseX%, %MouseY%");
 Sleep {sleep}
 Send {{{keys.ToString()} up}}
             ");
+            }
+        }
+
+        public static void Send(Keys keys)
+        {
+            lock (lockObject)
+            {
+                var ahk = AutoHotkeyEngine.Instance;
+
+                ahk.ExecRaw($@"Send {{{AutoHoykeyKeyboardMaps.Get(keys)}}}");
+
+                //switch(keys)
+                //{
+                //    case Keys.PageUp:
+                //        ahk.ExecRaw($@"Send {{PgUp}}");
+                //        break;
+                //    default:
+                //        ahk.ExecRaw($@"Send {{{AutoHoykeyKeyboardMaps.Get(keys)}}}");
+                //        break;
+                //}
+
             }
         }
 
