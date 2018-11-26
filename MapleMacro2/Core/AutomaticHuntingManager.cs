@@ -21,6 +21,10 @@ namespace MapleMacro2.Core
 
         public bool IsRunMacro { get; private set; }
         private Dictionary<System.Timers.Timer, SingleKeysInfo> listKeyTimer = new Dictionary<System.Timers.Timer, SingleKeysInfo>();
+        private System.Timers.Timer timerAutoBuff = new System.Timers.Timer();
+
+        private object lockQueueAutoBuff = new object();
+        private Queue<Keys> queueAutoBuff = new Queue<Keys>();
 
         #region Events
 
@@ -45,6 +49,39 @@ namespace MapleMacro2.Core
             hPMPWatcher.Start();
 
             tmrMacro.Elapsed += TmrMacro_Elapsed;
+
+            timerAutoBuff.Interval = 500;   // 버프 간 최소 간격(ms)
+            timerAutoBuff.Elapsed += TimerAutoBuff_Elapsed;
+        }
+
+        private void TimerAutoBuff_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            if (queueAutoBuff.Count == 0)
+                return;
+
+            timerAutoBuff.Enabled = false;
+            lock (lockQueueAutoBuff)
+            { 
+                while (queueAutoBuff.Count > 0)
+                {
+                    var tempKeys = queueAutoBuff.Dequeue();
+
+                    AutoHotkeyHelper.Send(tempKeys);
+
+                    FireLog($"{tempKeys.ToString()} 키 입력");
+
+                    System.Threading.Thread.Sleep(700);
+                }
+            }
+            timerAutoBuff.Enabled = true;
+        }
+
+        private void AddQueueAutoBuff(Keys keys)
+        {
+            lock(lockQueueAutoBuff)
+            {
+                queueAutoBuff.Enqueue(keys);
+            }
         }
 
         public void Start()
@@ -63,6 +100,8 @@ namespace MapleMacro2.Core
 
             tmrMacro.Interval = (int)CurrentConfig.TIMER_INTERVAL_PATTERN_1;
             tmrMacro.Enabled = true;
+                        
+            timerAutoBuff.Start();
         }
 
         public void Stop()
@@ -81,6 +120,9 @@ namespace MapleMacro2.Core
                 tmr.Key.Dispose();
             }
             listKeyTimer.Clear();
+
+            queueAutoBuff.Clear();
+            timerAutoBuff.Stop();
         }
 
         public void Toggle()
@@ -97,8 +139,7 @@ namespace MapleMacro2.Core
                 return;
 
             // 최초 1회 실행
-            AutoHotkeyHelper.Send(singleKeysInfo.KEYS);
-            System.Threading.Thread.Sleep(60);
+            AddQueueAutoBuff(singleKeysInfo.KEYS);
 
             // 타이머 설정
             System.Timers.Timer tmr = new System.Timers.Timer();
@@ -108,9 +149,11 @@ namespace MapleMacro2.Core
                 var tempTmr = sender as System.Timers.Timer;
                 var tempSingleKeysInfo = listKeyTimer[tempTmr];
 
-                AutoHotkeyHelper.Send(singleKeysInfo.KEYS);
+                //AutoHotkeyHelper.Send(singleKeysInfo.KEYS);
 
-                FireLog($"{tempSingleKeysInfo.KEYS.ToString()} 키 입력");
+                //FireLog($"{tempSingleKeysInfo.KEYS.ToString()} 키 입력");
+
+                AddQueueAutoBuff(singleKeysInfo.KEYS);
             };
 
             tmr.Interval = singleKeysInfo.TIME_DELAY;
@@ -146,16 +189,20 @@ namespace MapleMacro2.Core
 
             if (hPMPWatcher.CurrentHPPercent < CurrentConfig.AUTO_POTION_HP_MIN)
             {
-                AutoHotkeyHelper.Send(CurrentConfig.KEYS_HP_POTION);
+                AddQueueAutoBuff(CurrentConfig.KEYS_HP_POTION);
 
-                FireLog("HP 물약 사용");
+                //AutoHotkeyHelper.Send(CurrentConfig.KEYS_HP_POTION);
+
+                //FireLog("HP 물약 사용");
             }
 
             if (hPMPWatcher.CurrentMPPercent < CurrentConfig.AUTO_POTION_MP_MIN)
             {
-                AutoHotkeyHelper.Send(CurrentConfig.KEYS_MP_POTION);
+                AddQueueAutoBuff(CurrentConfig.KEYS_MP_POTION);
 
-                FireLog("MP 물약 사용");
+                //AutoHotkeyHelper.Send(CurrentConfig.KEYS_MP_POTION);
+
+                //FireLog("MP 물약 사용");
             }
         }
 

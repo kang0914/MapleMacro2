@@ -113,17 +113,13 @@ Send {{{keys.ToString()} up}}
             {
                 var ahk = AutoHotkeyEngine.Instance;
 
-                ahk.ExecRaw($@"Send {{{AutoHoykeyKeyboardMaps.Get(keys)}}}");
+                ahk.ExecRaw($@"Send {{{AutoHoykeyKeyboardMaps.Get(keys)} down}}
+                RandSleep(60, 80)
+                Send {{{AutoHoykeyKeyboardMaps.Get(keys)} up}}");
 
-                //switch(keys)
-                //{
-                //    case Keys.PageUp:
-                //        ahk.ExecRaw($@"Send {{PgUp}}");
-                //        break;
-                //    default:
-                //        ahk.ExecRaw($@"Send {{{AutoHoykeyKeyboardMaps.Get(keys)}}}");
-                //        break;
-                //}
+                //ahk.ExecRaw($@"Send {{{AutoHoykeyKeyboardMaps.Get(keys)}}}");
+
+                //System.Threading.Thread.Sleep(500);
 
             }
         }
