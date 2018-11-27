@@ -111,6 +111,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox자동물약_기능_사용 = new System.Windows.Forms.CheckBox();
             this.checkBox자동버프_기능_사용 = new System.Windows.Forms.CheckBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.checkBox자동사냥_기능_사용 = new System.Windows.Forms.CheckBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.keysTextBox자동물약_MP = new MapleMacro2.UserControls.KeysTextBox();
             this.keysTextBox자동물약_HP = new MapleMacro2.UserControls.KeysTextBox();
             this.keysTextBox종료_키 = new MapleMacro2.UserControls.KeysTextBox();
@@ -127,8 +130,6 @@
             this.keysTextBox기술_3_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.keysTextBox기술_2_키 = new MapleMacro2.UserControls.KeysTextBox();
             this.keysTextBox기술_1_키 = new MapleMacro2.UserControls.KeysTextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.checkBox자동사냥_기능_사용 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -141,13 +142,13 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown자동물약_MP_최소)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown자동물약_HP_최소)).BeginInit();
+            this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_6_실행간격)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_5_실행간격)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_4_실행간격)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_3_실행간격)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_2_실행간격)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_1_실행간격)).BeginInit();
-            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -601,6 +602,7 @@
             this.textBox공격패턴_1.TabIndex = 51;
             this.textBox공격패턴_1.Text = "Send {Alt down}\r\nSleep 100\r\nSend {Alt up}\r\nSleep 100\r\nSend {Alt down}\r\nSleep 100\r" +
     "\nSend {Alt up}\r\nSleep 350\r\nSend {Ctrl}";
+            this.textBox공격패턴_1.TextChanged += new System.EventHandler(this.textBox공격패턴_1_TextChanged);
             // 
             // label30
             // 
@@ -621,6 +623,7 @@
             this.textBox공격패턴_2.TabIndex = 53;
             this.textBox공격패턴_2.Text = "Send {Alt down}\r\nSleep 100\r\nSend {Alt up}\r\nSleep 100\r\nSend {Alt down}\r\nSleep 100\r" +
     "\nSend {Alt up}\r\nSleep 350\r\nSend {Ctrl}";
+            this.textBox공격패턴_2.TextChanged += new System.EventHandler(this.textBox공격패턴_2_TextChanged);
             // 
             // numericUpDownMacroInterval
             // 
@@ -644,6 +647,7 @@
             0,
             0,
             0});
+            this.numericUpDownMacroInterval.ValueChanged += new System.EventHandler(this.numericUpDownMacroInterval_ValueChanged);
             // 
             // label31
             // 
@@ -894,6 +898,7 @@
             0,
             0,
             0});
+            this.numericUpDown자동물약_MP_최소.ValueChanged += new System.EventHandler(this.numericUpDown자동물약_MP_최소_ValueChanged);
             // 
             // numericUpDown자동물약_HP_최소
             // 
@@ -911,6 +916,7 @@
             0,
             0,
             0});
+            this.numericUpDown자동물약_HP_최소.ValueChanged += new System.EventHandler(this.numericUpDown자동물약_HP_최소_ValueChanged);
             // 
             // label9
             // 
@@ -939,6 +945,7 @@
             this.checkBox자동물약_기능_사용.TabIndex = 0;
             this.checkBox자동물약_기능_사용.Text = "자동물약 기능 사용";
             this.checkBox자동물약_기능_사용.UseVisualStyleBackColor = true;
+            this.checkBox자동물약_기능_사용.CheckedChanged += new System.EventHandler(this.checkBox자동물약_기능_사용_CheckedChanged);
             // 
             // checkBox자동버프_기능_사용
             // 
@@ -949,6 +956,40 @@
             this.checkBox자동버프_기능_사용.TabIndex = 23;
             this.checkBox자동버프_기능_사용.Text = "자동버프 기능 사용";
             this.checkBox자동버프_기능_사용.UseVisualStyleBackColor = true;
+            this.checkBox자동버프_기능_사용.CheckedChanged += new System.EventHandler(this.checkBox자동버프_기능_사용_CheckedChanged);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.checkBox자동사냥_기능_사용);
+            this.groupBox6.Controls.Add(this.label31);
+            this.groupBox6.Controls.Add(this.textBox공격패턴_1);
+            this.groupBox6.Controls.Add(this.label29);
+            this.groupBox6.Controls.Add(this.label30);
+            this.groupBox6.Controls.Add(this.numericUpDownMacroInterval);
+            this.groupBox6.Controls.Add(this.textBox공격패턴_2);
+            this.groupBox6.Location = new System.Drawing.Point(484, 109);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(212, 265);
+            this.groupBox6.TabIndex = 58;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "자동사냥";
+            // 
+            // checkBox자동사냥_기능_사용
+            // 
+            this.checkBox자동사냥_기능_사용.AutoSize = true;
+            this.checkBox자동사냥_기능_사용.Location = new System.Drawing.Point(16, 19);
+            this.checkBox자동사냥_기능_사용.Name = "checkBox자동사냥_기능_사용";
+            this.checkBox자동사냥_기능_사용.Size = new System.Drawing.Size(128, 16);
+            this.checkBox자동사냥_기능_사용.TabIndex = 57;
+            this.checkBox자동사냥_기능_사용.Text = "자동사냥 기능 사용";
+            this.checkBox자동사냥_기능_사용.UseVisualStyleBackColor = true;
+            this.checkBox자동사냥_기능_사용.CheckedChanged += new System.EventHandler(this.checkBox자동사냥_기능_사용_CheckedChanged);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipTitle = "Macro Stroy";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Macro Story";
             // 
             // keysTextBox자동물약_MP
             // 
@@ -961,6 +1002,7 @@
             this.keysTextBox자동물약_MP.TabIndex = 3;
             this.keysTextBox자동물약_MP.Text = "None";
             this.keysTextBox자동물약_MP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.keysTextBox자동물약_MP.KeysChanged += new System.EventHandler(this.keysTextBox자동물약_MP_KeysChanged);
             // 
             // keysTextBox자동물약_HP
             // 
@@ -973,6 +1015,7 @@
             this.keysTextBox자동물약_HP.TabIndex = 2;
             this.keysTextBox자동물약_HP.Text = "None";
             this.keysTextBox자동물약_HP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.keysTextBox자동물약_HP.KeysChanged += new System.EventHandler(this.keysTextBox자동물약_HP_KeysChanged);
             // 
             // keysTextBox종료_키
             // 
@@ -1017,6 +1060,7 @@
             this.delayTextBox기술_6_실행간격.TabIndex = 19;
             this.delayTextBox기술_6_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.delayTextBox기술_6_실행간격.ValueForInt = 0;
+            this.delayTextBox기술_6_실행간격.ValueChanged += new System.EventHandler(this.delayTextBox기술_6_실행간격_ValueChanged);
             // 
             // keysTextBox기술_6_키
             // 
@@ -1046,6 +1090,7 @@
             this.delayTextBox기술_5_실행간격.TabIndex = 14;
             this.delayTextBox기술_5_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.delayTextBox기술_5_실행간격.ValueForInt = 0;
+            this.delayTextBox기술_5_실행간격.ValueChanged += new System.EventHandler(this.delayTextBox기술_5_실행간격_ValueChanged);
             // 
             // keysTextBox기술_5_키
             // 
@@ -1075,6 +1120,7 @@
             this.delayTextBox기술_4_실행간격.TabIndex = 8;
             this.delayTextBox기술_4_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.delayTextBox기술_4_실행간격.ValueForInt = 0;
+            this.delayTextBox기술_4_실행간격.ValueChanged += new System.EventHandler(this.delayTextBox기술_4_실행간격_ValueChanged);
             // 
             // delayTextBox기술_3_실행간격
             // 
@@ -1089,6 +1135,7 @@
             this.delayTextBox기술_3_실행간격.TabIndex = 8;
             this.delayTextBox기술_3_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.delayTextBox기술_3_실행간격.ValueForInt = 0;
+            this.delayTextBox기술_3_실행간격.ValueChanged += new System.EventHandler(this.delayTextBox기술_3_실행간격_ValueChanged);
             // 
             // delayTextBox기술_2_실행간격
             // 
@@ -1103,6 +1150,7 @@
             this.delayTextBox기술_2_실행간격.TabIndex = 8;
             this.delayTextBox기술_2_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.delayTextBox기술_2_실행간격.ValueForInt = 0;
+            this.delayTextBox기술_2_실행간격.ValueChanged += new System.EventHandler(this.delayTextBox기술_2_실행간격_ValueChanged);
             // 
             // delayTextBox기술_1_실행간격
             // 
@@ -1117,6 +1165,7 @@
             this.delayTextBox기술_1_실행간격.TabIndex = 8;
             this.delayTextBox기술_1_실행간격.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.delayTextBox기술_1_실행간격.ValueForInt = 0;
+            this.delayTextBox기술_1_실행간격.ValueChanged += new System.EventHandler(this.delayTextBox기술_1_실행간격_ValueChanged);
             // 
             // keysTextBox기술_4_키
             // 
@@ -1178,32 +1227,6 @@
             this.keysTextBox기술_1_키.Enter += new System.EventHandler(this.keysTextBox기술_1_키_Enter);
             this.keysTextBox기술_1_키.Leave += new System.EventHandler(this.keysTextBox기술_1_키_Leave);
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.checkBox자동사냥_기능_사용);
-            this.groupBox6.Controls.Add(this.label31);
-            this.groupBox6.Controls.Add(this.textBox공격패턴_1);
-            this.groupBox6.Controls.Add(this.label29);
-            this.groupBox6.Controls.Add(this.label30);
-            this.groupBox6.Controls.Add(this.numericUpDownMacroInterval);
-            this.groupBox6.Controls.Add(this.textBox공격패턴_2);
-            this.groupBox6.Location = new System.Drawing.Point(484, 109);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(212, 265);
-            this.groupBox6.TabIndex = 58;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "자동사냥";
-            // 
-            // checkBox자동사냥_기능_사용
-            // 
-            this.checkBox자동사냥_기능_사용.AutoSize = true;
-            this.checkBox자동사냥_기능_사용.Location = new System.Drawing.Point(16, 19);
-            this.checkBox자동사냥_기능_사용.Name = "checkBox자동사냥_기능_사용";
-            this.checkBox자동사냥_기능_사용.Size = new System.Drawing.Size(128, 16);
-            this.checkBox자동사냥_기능_사용.TabIndex = 57;
-            this.checkBox자동사냥_기능_사용.Text = "자동사냥 기능 사용";
-            this.checkBox자동사냥_기능_사용.UseVisualStyleBackColor = true;
-            // 
             // F1000
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1214,9 +1237,10 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "F1000";
-            this.Text = "MapleMacro2";
+            this.Text = "Macro Story";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.F1000_FormClosing);
             this.Load += new System.EventHandler(this.F1000_Load);
             this.groupBox1.ResumeLayout(false);
@@ -1239,14 +1263,14 @@
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown자동물약_MP_최소)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown자동물약_HP_최소)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_6_실행간격)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_5_실행간격)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_4_실행간격)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_3_실행간격)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_2_실행간격)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_1_실행간격)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1352,6 +1376,7 @@
         private System.Windows.Forms.CheckBox checkBox자동버프_기능_사용;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckBox checkBox자동사냥_기능_사용;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 

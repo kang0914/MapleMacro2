@@ -350,6 +350,10 @@ namespace MapleMacro2.UI
             toolStripButton정보.Enabled = false;
 
             panel루트.Enabled = false;
+
+            notifyIcon1.Visible = true;
+            notifyIcon1.BalloonTipText = "매크로가 시작되었습니다.";
+            notifyIcon1.ShowBalloonTip(500);
         }
 
         private void EndMacro()
@@ -380,6 +384,9 @@ namespace MapleMacro2.UI
             toolStripButton정보.Enabled = true;
 
             panel루트.Enabled = true;
+
+            notifyIcon1.BalloonTipText = "매크로가 종료되었습니다.";
+            notifyIcon1.ShowBalloonTip(500);
         }
 
         private void ToggleMacro()
@@ -389,34 +396,6 @@ namespace MapleMacro2.UI
             else
                 StartMacro();
         }
-
-        //private void Execute(SingleKeysInfo singleKeysInfo)
-        //{
-        //    if (singleKeysInfo.KEYS == Keys.None || singleKeysInfo.TIME_DELAY == 0)
-        //        return;
-
-        //    // 최초 1회 실행
-        //    SendMessageHelper.KeyboardPress(Properties.Settings.Default.SELECTED_GAME_TITLE, singleKeysInfo.KEYS);
-
-        //    // 타이머 설정
-        //    Timer tmr = new Timer();
-
-        //    tmr.Tick += (sender, e) =>
-        //    {
-        //        var tempTmr = sender as Timer;
-        //        var tempSingleKeysInfo = tempTmr.Tag as SingleKeysInfo;
-
-        //        SendMessageHelper.KeyboardPress(Properties.Settings.Default.SELECTED_GAME_TITLE, tempSingleKeysInfo.KEYS);
-
-        //        AddLog($"{tempSingleKeysInfo.KEYS.ToString()} 키 입력");
-        //    };
-
-        //    tmr.Tag = singleKeysInfo;
-        //    tmr.Interval = singleKeysInfo.TIME_DELAY;
-        //    tmr.Enabled = true;
-
-        //    listKeyTimer.Add(tmr);
-        //}
 
         #region 캡쳐
 
@@ -435,11 +414,15 @@ namespace MapleMacro2.UI
         private void keysTextBox시작_키_KeysChanged(object sender, EventArgs e)
         {
             UpdateHotKey();
+
+            IS_CHANGED = true;
         }
 
         private void keysTextBox종료_키_KeysChanged(object sender, EventArgs e)
         {
             UpdateHotKey();
+
+            IS_CHANGED = true;
         }
 
         #region 상단메뉴
@@ -591,7 +574,7 @@ namespace MapleMacro2.UI
         {
             SaveFileDialog sfd = new SaveFileDialog();
 
-            sfd.Filter = "Maple Macro2 Config File (*.mm2proj)|*.mm2proj";
+            sfd.Filter = "Macro Story Config File (*.mm2proj)|*.mm2proj";
             sfd.FileName = "제목없음";
 
             if (sfd.ShowDialog() != DialogResult.OK)
@@ -902,6 +885,86 @@ namespace MapleMacro2.UI
         private void toolStripButton중지_Click(object sender, EventArgs e)
         {
             EndMacro();
+        }
+
+        private void delayTextBox기술_1_실행간격_ValueChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void delayTextBox기술_2_실행간격_ValueChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void delayTextBox기술_3_실행간격_ValueChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void delayTextBox기술_4_실행간격_ValueChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void delayTextBox기술_5_실행간격_ValueChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void delayTextBox기술_6_실행간격_ValueChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void checkBox자동버프_기능_사용_CheckedChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void checkBox자동물약_기능_사용_CheckedChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void checkBox자동사냥_기능_사용_CheckedChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void keysTextBox자동물약_HP_KeysChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void keysTextBox자동물약_MP_KeysChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void numericUpDown자동물약_HP_최소_ValueChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void numericUpDown자동물약_MP_최소_ValueChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void numericUpDownMacroInterval_ValueChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void textBox공격패턴_1_TextChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
+        }
+
+        private void textBox공격패턴_2_TextChanged(object sender, EventArgs e)
+        {
+            IS_CHANGED = true;
         }
     }
 }

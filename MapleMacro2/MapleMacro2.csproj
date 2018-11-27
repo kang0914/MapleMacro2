@@ -279,6 +279,7 @@
     <Content Include="Images\1366_768\minimap_user_transblack3.BMP">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="maplestory_favicon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\EventArgs\" />
