@@ -331,22 +331,10 @@ namespace MapleMacro2.UI
             EndMacro();
         }
 
-        //private bool IsRunMacro = false;
-        //private List<Timer> listKeyTimer = new List<Timer>();
-
         private void StartMacro()
         {
             if (automaticHuntingManager.IsRunMacro)
                 return;
-
-            //IsRunMacro = true;
-            
-            //Execute(CurrentConfig.FUNC_1);
-            //Execute(CurrentConfig.FUNC_2);
-            //Execute(CurrentConfig.FUNC_3);
-            //Execute(CurrentConfig.FUNC_4);
-            //Execute(CurrentConfig.FUNC_5);
-            //Execute(CurrentConfig.FUNC_6);
 
             automaticHuntingManager.CurrentConfig = CurrentConfig;
             automaticHuntingManager.Start();
@@ -704,7 +692,10 @@ namespace MapleMacro2.UI
                     KEYS_MACRO_START = keysTextBox시작_키.SelectedKeys,
                     KEYS_MACRO_END = keysTextBox종료_키.SelectedKeys,
 
+                    USE_AUTO_BUFF = checkBox자동버프_기능_사용.Checked,
                     USE_AUTO_POTION = checkBox자동물약_기능_사용.Checked,
+                    USE_AUTO_HUNTING = checkBox자동사냥_기능_사용.Checked,
+
                     KEYS_HP_POTION = keysTextBox자동물약_HP.SelectedKeys,
                     KEYS_MP_POTION = keysTextBox자동물약_MP.SelectedKeys,
                     AUTO_POTION_HP_MIN = (int)numericUpDown자동물약_HP_최소.Value,
@@ -721,7 +712,6 @@ namespace MapleMacro2.UI
 
                     SCRIPT_PATTERN_ATTACK_1 = textBox공격패턴_1.Text,
                     SCRIPT_PATTERN_ATTACK_2 = textBox공격패턴_2.Text,
-
                 };
             }
 
@@ -730,6 +720,10 @@ namespace MapleMacro2.UI
 
                 keysTextBox시작_키.SelectedKeys = value.KEYS_MACRO_START;
                 keysTextBox종료_키.SelectedKeys = value.KEYS_MACRO_END;
+
+                checkBox자동버프_기능_사용.Checked = value.USE_AUTO_BUFF;
+                checkBox자동물약_기능_사용.Checked = value.USE_AUTO_POTION;
+                checkBox자동사냥_기능_사용.Checked = value.USE_AUTO_HUNTING;
 
                 keysTextBox기술_1_키.SelectedKeys = value.FUNC_1.KEYS;
                 delayTextBox기술_1_실행간격.ValueForInt = value.FUNC_1.TIME_DELAY;
@@ -754,7 +748,6 @@ namespace MapleMacro2.UI
                 textBox공격패턴_1.Text = value.SCRIPT_PATTERN_ATTACK_1;
                 textBox공격패턴_2.Text = value.SCRIPT_PATTERN_ATTACK_2;
 
-                checkBox자동물약_기능_사용.Checked = value.USE_AUTO_POTION;
                 keysTextBox자동물약_HP.SelectedKeys = value.KEYS_HP_POTION;
                 keysTextBox자동물약_MP.SelectedKeys = value.KEYS_MP_POTION;
                 numericUpDown자동물약_HP_최소.Value = value.AUTO_POTION_HP_MIN;
@@ -909,13 +902,6 @@ namespace MapleMacro2.UI
         private void toolStripButton중지_Click(object sender, EventArgs e)
         {
             EndMacro();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var size = SendMessageHelper.GetWindowRect("MapleStory");
-
-            MessageBox.Show(size.ToString());
         }
     }
 }

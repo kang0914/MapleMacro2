@@ -86,27 +86,33 @@ namespace MapleMacro2.Core
 
         public void Start()
         {
-            if (tmrMacro.Enabled)
+            if (IsRunMacro)
                 return;
 
             IsRunMacro = true;
 
-            Execute(CurrentConfig.FUNC_1);
-            Execute(CurrentConfig.FUNC_2);
-            Execute(CurrentConfig.FUNC_3);
-            Execute(CurrentConfig.FUNC_4);
-            Execute(CurrentConfig.FUNC_5);
-            Execute(CurrentConfig.FUNC_6);
+            if (CurrentConfig.USE_AUTO_BUFF)
+            {
+                Execute(CurrentConfig.FUNC_1);
+                Execute(CurrentConfig.FUNC_2);
+                Execute(CurrentConfig.FUNC_3);
+                Execute(CurrentConfig.FUNC_4);
+                Execute(CurrentConfig.FUNC_5);
+                Execute(CurrentConfig.FUNC_6);
 
-            tmrMacro.Interval = (int)CurrentConfig.TIMER_INTERVAL_PATTERN_1;
-            tmrMacro.Enabled = true;
-                        
-            timerAutoBuff.Start();
+                timerAutoBuff.Start();
+            }
+
+            if (CurrentConfig.USE_AUTO_HUNTING)
+            { 
+                tmrMacro.Interval = (int)CurrentConfig.TIMER_INTERVAL_PATTERN_1;
+                tmrMacro.Enabled = true;
+            }
         }
 
         public void Stop()
         {
-            if (tmrMacro.Enabled == false)
+            if (IsRunMacro == false)
                 return;
 
             IsRunMacro = false;
@@ -166,15 +172,15 @@ namespace MapleMacro2.Core
         {
             if (공격방향_오른쪽에서_왼쪽으로)
             {
-                //AutoHotkeyHelper.ExecRaw(CurrentConfig.SCRIPT_PATTERN_ATTACK_1);
+                AutoHotkeyHelper.ExecRaw(CurrentConfig.SCRIPT_PATTERN_ATTACK_1);
 
-                //FireLog("공격패턴 1 실행");
+                FireLog("공격패턴 1 실행");
             }
             else
             {
-                //AutoHotkeyHelper.ExecRaw(CurrentConfig.SCRIPT_PATTERN_ATTACK_2);
+                AutoHotkeyHelper.ExecRaw(CurrentConfig.SCRIPT_PATTERN_ATTACK_2);
                 
-                //FireLog("공격패턴 2 실행");
+                FireLog("공격패턴 2 실행");
             }
         }
 

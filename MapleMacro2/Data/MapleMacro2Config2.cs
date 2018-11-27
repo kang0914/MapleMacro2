@@ -11,13 +11,15 @@ namespace MapleMacro2.Data
         public Keys KEYS_MACRO_START { get; set; }
         public Keys KEYS_MACRO_END { get; set; }
 
-        public Keys KEYS_HP_POTION { get; set; }
-        public Keys KEYS_MP_POTION { get; set; }
-
         public bool USE_AUTO_POTION { get; set; }
+        public bool USE_AUTO_BUFF { get; set; }
+        public bool USE_AUTO_HUNTING { get; set; }
+
+        public Keys KEYS_HP_POTION { get; set; }
+        public Keys KEYS_MP_POTION { get; set; }        
         public int AUTO_POTION_HP_MIN { get; set; }
         public int AUTO_POTION_MP_MIN { get; set; }
-
+        
         public SingleKeysInfo FUNC_1 { get; set; }
         public SingleKeysInfo FUNC_2 { get; set; }
         public SingleKeysInfo FUNC_3 { get; set; }
@@ -33,9 +35,12 @@ namespace MapleMacro2.Data
         public MapleMacro2Config2()
         {
             USE_AUTO_POTION = false;
+            USE_AUTO_BUFF = true;
+            USE_AUTO_HUNTING = false;
+
             AUTO_POTION_HP_MIN = 50;
             AUTO_POTION_MP_MIN = 50;
-
+            
             FUNC_1 = new SingleKeysInfo();
             FUNC_2 = new SingleKeysInfo();
             FUNC_3 = new SingleKeysInfo();
