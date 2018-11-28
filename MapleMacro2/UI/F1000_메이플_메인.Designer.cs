@@ -38,6 +38,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox자동버프_기능_사용 = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -104,16 +105,16 @@
             this.labelPixelSearch = new System.Windows.Forms.Label();
             this.timer미니맵 = new System.Windows.Forms.Timer(this.components);
             this.panel루트 = new System.Windows.Forms.Panel();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.checkBox자동사냥_기능_사용 = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.numericUpDown자동물약_MP_최소 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown자동물약_HP_최소 = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox자동물약_기능_사용 = new System.Windows.Forms.CheckBox();
-            this.checkBox자동버프_기능_사용 = new System.Windows.Forms.CheckBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.checkBox자동사냥_기능_사용 = new System.Windows.Forms.CheckBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.toolStripStatusLabelFileVersion = new System.Windows.Forms.ToolStripStatusLabel();
             this.keysTextBox자동물약_MP = new MapleMacro2.UserControls.KeysTextBox();
             this.keysTextBox자동물약_HP = new MapleMacro2.UserControls.KeysTextBox();
             this.keysTextBox종료_키 = new MapleMacro2.UserControls.KeysTextBox();
@@ -139,10 +140,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMacroInterval)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel루트.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown자동물약_MP_최소)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown자동물약_HP_최소)).BeginInit();
-            this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_6_실행간격)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_5_실행간격)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_4_실행간격)).BeginInit();
@@ -245,6 +246,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "자동버프";
             // 
+            // checkBox자동버프_기능_사용
+            // 
+            this.checkBox자동버프_기능_사용.AutoSize = true;
+            this.checkBox자동버프_기능_사용.Location = new System.Drawing.Point(14, 26);
+            this.checkBox자동버프_기능_사용.Name = "checkBox자동버프_기능_사용";
+            this.checkBox자동버프_기능_사용.Size = new System.Drawing.Size(128, 16);
+            this.checkBox자동버프_기능_사용.TabIndex = 23;
+            this.checkBox자동버프_기능_사용.Text = "자동버프 기능 사용";
+            this.checkBox자동버프_기능_사용.UseVisualStyleBackColor = true;
+            this.checkBox자동버프_기능_사용.CheckedChanged += new System.EventHandler(this.checkBox자동버프_기능_사용_CheckedChanged);
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -266,12 +278,13 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelFileVersion,
             this.toolStripStatusLabel,
             this.toolStripProgressBar시작유무,
             this.toolStripStatusLabel시작유무});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 490);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 449);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(721, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(704, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 14;
             this.statusStrip1.Text = "statusStrip1";
@@ -282,7 +295,7 @@
             this.toolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.toolStripStatusLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(604, 17);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(537, 17);
             this.toolStripStatusLabel.Spring = true;
             this.toolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -337,7 +350,7 @@
             this.도움말ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(721, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(704, 24);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -487,7 +500,7 @@
             this.toolStripButton정보});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(721, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(704, 25);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -567,9 +580,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.textBoxLog);
-            this.groupBox4.Location = new System.Drawing.Point(249, 210);
+            this.groupBox4.Location = new System.Drawing.Point(467, 213);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(209, 164);
+            this.groupBox4.Size = new System.Drawing.Size(209, 161);
             this.groupBox4.TabIndex = 50;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "로그";
@@ -804,7 +817,7 @@
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.labelLeft);
-            this.groupBox2.Location = new System.Drawing.Point(249, 3);
+            this.groupBox2.Location = new System.Drawing.Point(467, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(209, 203);
             this.groupBox2.TabIndex = 49;
@@ -863,8 +876,35 @@
             this.panel루트.Controls.Add(this.groupBox4);
             this.panel루트.Location = new System.Drawing.Point(13, 59);
             this.panel루트.Name = "panel루트";
-            this.panel루트.Size = new System.Drawing.Size(701, 428);
+            this.panel루트.Size = new System.Drawing.Size(683, 379);
             this.panel루트.TabIndex = 57;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.checkBox자동사냥_기능_사용);
+            this.groupBox6.Controls.Add(this.label31);
+            this.groupBox6.Controls.Add(this.textBox공격패턴_1);
+            this.groupBox6.Controls.Add(this.label29);
+            this.groupBox6.Controls.Add(this.label30);
+            this.groupBox6.Controls.Add(this.numericUpDownMacroInterval);
+            this.groupBox6.Controls.Add(this.textBox공격패턴_2);
+            this.groupBox6.Location = new System.Drawing.Point(249, 111);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(212, 263);
+            this.groupBox6.TabIndex = 58;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "자동사냥";
+            // 
+            // checkBox자동사냥_기능_사용
+            // 
+            this.checkBox자동사냥_기능_사용.AutoSize = true;
+            this.checkBox자동사냥_기능_사용.Location = new System.Drawing.Point(16, 19);
+            this.checkBox자동사냥_기능_사용.Name = "checkBox자동사냥_기능_사용";
+            this.checkBox자동사냥_기능_사용.Size = new System.Drawing.Size(128, 16);
+            this.checkBox자동사냥_기능_사용.TabIndex = 57;
+            this.checkBox자동사냥_기능_사용.Text = "자동사냥 기능 사용";
+            this.checkBox자동사냥_기능_사용.UseVisualStyleBackColor = true;
+            this.checkBox자동사냥_기능_사용.CheckedChanged += new System.EventHandler(this.checkBox자동사냥_기능_사용_CheckedChanged);
             // 
             // groupBox5
             // 
@@ -875,7 +915,7 @@
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.checkBox자동물약_기능_사용);
-            this.groupBox5.Location = new System.Drawing.Point(484, 4);
+            this.groupBox5.Location = new System.Drawing.Point(249, 6);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(200, 99);
             this.groupBox5.TabIndex = 57;
@@ -947,49 +987,17 @@
             this.checkBox자동물약_기능_사용.UseVisualStyleBackColor = true;
             this.checkBox자동물약_기능_사용.CheckedChanged += new System.EventHandler(this.checkBox자동물약_기능_사용_CheckedChanged);
             // 
-            // checkBox자동버프_기능_사용
-            // 
-            this.checkBox자동버프_기능_사용.AutoSize = true;
-            this.checkBox자동버프_기능_사용.Location = new System.Drawing.Point(14, 26);
-            this.checkBox자동버프_기능_사용.Name = "checkBox자동버프_기능_사용";
-            this.checkBox자동버프_기능_사용.Size = new System.Drawing.Size(128, 16);
-            this.checkBox자동버프_기능_사용.TabIndex = 23;
-            this.checkBox자동버프_기능_사용.Text = "자동버프 기능 사용";
-            this.checkBox자동버프_기능_사용.UseVisualStyleBackColor = true;
-            this.checkBox자동버프_기능_사용.CheckedChanged += new System.EventHandler(this.checkBox자동버프_기능_사용_CheckedChanged);
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.checkBox자동사냥_기능_사용);
-            this.groupBox6.Controls.Add(this.label31);
-            this.groupBox6.Controls.Add(this.textBox공격패턴_1);
-            this.groupBox6.Controls.Add(this.label29);
-            this.groupBox6.Controls.Add(this.label30);
-            this.groupBox6.Controls.Add(this.numericUpDownMacroInterval);
-            this.groupBox6.Controls.Add(this.textBox공격패턴_2);
-            this.groupBox6.Location = new System.Drawing.Point(484, 109);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(212, 265);
-            this.groupBox6.TabIndex = 58;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "자동사냥";
-            // 
-            // checkBox자동사냥_기능_사용
-            // 
-            this.checkBox자동사냥_기능_사용.AutoSize = true;
-            this.checkBox자동사냥_기능_사용.Location = new System.Drawing.Point(16, 19);
-            this.checkBox자동사냥_기능_사용.Name = "checkBox자동사냥_기능_사용";
-            this.checkBox자동사냥_기능_사용.Size = new System.Drawing.Size(128, 16);
-            this.checkBox자동사냥_기능_사용.TabIndex = 57;
-            this.checkBox자동사냥_기능_사용.Text = "자동사냥 기능 사용";
-            this.checkBox자동사냥_기능_사용.UseVisualStyleBackColor = true;
-            this.checkBox자동사냥_기능_사용.CheckedChanged += new System.EventHandler(this.checkBox자동사냥_기능_사용_CheckedChanged);
-            // 
             // notifyIcon1
             // 
             this.notifyIcon1.BalloonTipTitle = "Macro Stroy";
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "Macro Story";
+            // 
+            // toolStripStatusLabelFileVersion
+            // 
+            this.toolStripStatusLabelFileVersion.Name = "toolStripStatusLabelFileVersion";
+            this.toolStripStatusLabelFileVersion.Size = new System.Drawing.Size(50, 17);
+            this.toolStripStatusLabelFileVersion.Text = "v1.0.0.0";
             // 
             // keysTextBox자동물약_MP
             // 
@@ -1231,7 +1239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 512);
+            this.ClientSize = new System.Drawing.Size(704, 471);
             this.Controls.Add(this.panel루트);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
@@ -1259,12 +1267,12 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel루트.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown자동물약_MP_최소)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown자동물약_HP_최소)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_6_실행간격)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_5_실행간격)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delayTextBox기술_4_실행간격)).EndInit();
@@ -1377,6 +1385,7 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckBox checkBox자동사냥_기능_사용;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelFileVersion;
     }
 }
 

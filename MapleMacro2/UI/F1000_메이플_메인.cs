@@ -40,6 +40,8 @@ namespace MapleMacro2.UI
             UpdateRecentlyOpenConfigFile();
 
             automaticHuntingManager.OnLog += AutomaticHuntingManager_OnLog;
+
+            toolStripStatusLabelFileVersion.Text = "v" + System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).FileVersion;
         }
 
         private void timer미니맵_Tick(object sender, EventArgs e)
